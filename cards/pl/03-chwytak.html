@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · karta 3: Chwytak</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">spis</a> · <a href="02-orientacja.html">← poprzednia</a></span><span><a href="04-strona-otwarcia.html">następna →</a></span></nav>
+<article class="karta" id="karta-3">
+<div class="glowa"><div><header><span class="nr">3</span><h1>Chwytak</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Chwytak w orientacji 0 stoi długością wzdłuż X, przodem (trójkąt) do góry rysunku. Przy pobraniu jego orientacja liczy się w układzie transportera, przy odłożeniu w układzie palety.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<p>Orientację 0 chwytaka zalecamy przyjąć tak, jak chwytak najczęściej pobiera produkty z transportera. Plik podaje obrys
+otwartego chwytaka, niezależnie od jego rodzaju: przy chwytaku szczękowym to obrys przy maksymalnie otwartych
+szczękach. Obrys jest zwykle większy od pobieranych produktów. Strona otwarcia (90 albo 270, karta 4) musi być
+wolna przy odkładaniu: przy chwytaku szczękowym to strona ruchomej szczęki, przy grabiowym strona, od której
+wsuwają się grabie.</p>
+<div class="rzad"><figure class="pol"><img src="rysunki/k3-chwytak.svg" alt="Chwytak w orientacji 0. Obrys otwartego chwytaka w mm: długość wzdłuż, szerokość w poprzek."><figcaption>Chwytak w orientacji 0. Obrys otwartego chwytaka w mm: długość wzdłuż, szerokość w poprzek.</figcaption></figure><figure class="pol"><img src="rysunki/k3-pobranie.svg" alt="Transporter: kierunek jazdy w dół rysunku, koniec na dole. [0]: produkt przy końcu transportera."><figcaption>Transporter: kierunek jazdy w dół rysunku, koniec na dole. [0]: produkt przy końcu transportera.</figcaption></figure></div>
+
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k3-orientacje.svg" alt="Przy odłożeniu chwytak może stać w każdej z czterech orientacji w układzie palety."><figcaption>Przy odłożeniu chwytak może stać w każdej z czterech orientacji w układzie palety.</figcaption></figure></div>
+
+<ul>
+<li>Orientacja chwytaka przy pobraniu (<code>gripper_pick_orientation</code>): 0 albo 180, w układzie transportera.</li>
+<li>Orientacja chwytaka przy odłożeniu (<code>gripper_place_orientation</code>): 0, 90, 180 albo 270, w układzie palety.</li>
+<li>Produkty przy pobraniu (<code>products_at_pick</code>): produkty w kolejności dojazdu do końca transportera, każdy z numerem
+  produktu (<code>product_id</code>) i orientacją przy pobraniu (<code>orientation</code>). <code>[0]</code> to produkt przy końcu transportera,
+  dalej kolejne od końca.</li>
+<li>W orientacji 0 przy końcu transportera leży tył chwytaka, w orientacji 180 jego przód.</li>
+<li>Dozwolone orientacje chwytaka przy pobraniu (<code>gripper.allowed_pick_orientation</code>) i przy odłożeniu
+  (<code>gripper.allowed_place_orientation</code>) to ustawienia stanowiska.</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 3 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 262" width="340" height="262" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<title>Strona otwarcia chwytaka: produkty leżą przy stronie naprzeciw strony otwarcia</title>
+<text x="85" y="18" font-size="12" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">strona otwarcia 90</text>
+<g transform="translate(92.5 82.25) rotate(-270)" data-rotation="270">
+<rect x="-31.25" y="-36.25" width="62.5" height="72.5" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(92.5 144.75) rotate(-270)" data-rotation="270">
+<rect x="-31.25" y="-36.25" width="62.5" height="72.5" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(85 121) rotate(0)" data-rotation="0">
+<rect x="-43.75" y="-75" width="87.5" height="150" fill="#ffd21f" stroke="#d08c00" stroke-width="1.8" fill-opacity="0.2"/>
+<rect x="-56.25" y="-75" width="5" height="150" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="90"/>
+<line x1="-43.75" y1="-27" x2="-53.75" y2="-27" stroke="#7a4a00" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2"/>
+<line x1="-43.75" y1="27" x2="-53.75" y2="27" stroke="#7a4a00" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2"/>
+<line x1="-57.25" y1="0" x2="-64.15" y2="0" stroke="#7a4a00" stroke-width="1.5" stroke-linecap="butt"/>
+<polygon points="-69.25,0 -62.65,-2.97 -62.65,2.97" fill="#7a4a00"/>
+<rect x="41.25" y="-75" width="5" height="150" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="270"/>
+<polygon points="-10,-76.5 10,-76.5 0,-88" fill="#7a4a00" data-front="0"/>
+<circle cx="0" cy="0" r="8" fill="#ffffff" stroke="#7a4a00" stroke-width="1.5"/>
+<circle cx="0" cy="0" r="3.2" fill="#7a4a00"/>
+</g>
+<text x="31.25" y="211" font-size="11" fill="#7a4a00" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">90</text>
+<text x="128.75" y="211" font-size="11" fill="#7a4a00" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">270</text>
+<text x="255" y="18" font-size="12" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">strona otwarcia 270</text>
+<g transform="translate(247.5 82.25) rotate(-270)" data-rotation="270">
+<rect x="-31.25" y="-36.25" width="62.5" height="72.5" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(247.5 144.75) rotate(-270)" data-rotation="270">
+<rect x="-31.25" y="-36.25" width="62.5" height="72.5" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(255 121) rotate(0)" data-rotation="0">
+<rect x="-43.75" y="-75" width="87.5" height="150" fill="#ffd21f" stroke="#d08c00" stroke-width="1.8" fill-opacity="0.2"/>
+<rect x="-46.25" y="-75" width="5" height="150" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="90"/>
+<rect x="51.25" y="-75" width="5" height="150" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="270"/>
+<line x1="43.75" y1="-27" x2="53.75" y2="-27" stroke="#7a4a00" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2"/>
+<line x1="43.75" y1="27" x2="53.75" y2="27" stroke="#7a4a00" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2"/>
+<line x1="57.25" y1="0" x2="64.15" y2="0" stroke="#7a4a00" stroke-width="1.5" stroke-linecap="butt"/>
+<polygon points="69.25,0 62.65,2.97 62.65,-2.97" fill="#7a4a00"/>
+<polygon points="-10,-76.5 10,-76.5 0,-88" fill="#7a4a00" data-front="0"/>
+<circle cx="0" cy="0" r="8" fill="#ffffff" stroke="#7a4a00" stroke-width="1.5"/>
+<circle cx="0" cy="0" r="3.2" fill="#7a4a00"/>
+</g>
+<text x="211.25" y="211" font-size="11" fill="#7a4a00" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">90</text>
+<text x="308.75" y="211" font-size="11" fill="#7a4a00" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">270</text>
+<rect x="82" y="218" width="161.07" height="36.2" fill="#ffffff" rx="7" stroke="#7b2fa0" stroke-width="1.2"/>
+<text x="88" y="233.35" font-size="11" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif"><tspan x="88" dy="0">produkty przy stronie</tspan><tspan x="88" dy="13.2">naprzeciw strony otwarcia</tspan></text>
+<line x1="112" y1="218" x2="128.75" y2="151" stroke="#7b2fa0" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="128.75" cy="151" r="2.4" fill="#7b2fa0"/>
+<line x1="213.07" y1="218" x2="211.25" y2="151" stroke="#7b2fa0" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="211.25" cy="151" r="2.4" fill="#7b2fa0"/>
+</svg>

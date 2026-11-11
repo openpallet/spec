@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · card 7: OpenPallet 1.2 file</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">contents</a> · <a href="06-stack-and-slip-sheets.html">← previous</a></span><span></span></nav>
+<article class="karta" id="karta-7">
+<div class="glowa"><div><header><span class="nr">7</span><h1>OpenPallet 1.2 file</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">An OpenPallet file is JSON. Its top-level keys have a fixed order, and what belongs together lies nested in them: the moves in the unique layer, the products in the move.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k7-plik.svg" alt="Structure of the file in the order of writing. { }: object, [ ]: list, grey row: the fields of every item of the list."><figcaption>Structure of the file in the order of writing. { }: object, [ ]: list, grey row: the fields of every item of the list.</figcaption></figure></div>
+
+<ul>
+<li><strong>Recognition:</strong> <code>format.name</code> = <code>"OpenPallet"</code> and <code>format.version</code> 1.2 or a later 1.x: read. Another name or
+  version: reject. Skip unknown keys.</li>
+<li>Later 1.x versions add only optional fields: a program that reads 1.2 reads every later 1.x file.</li>
+<li>Units: positions and sizes in mm, mass in g, orientations and directions in degrees (whole numbers). Slip sheet
+  thickness and <code>summary.height</code> in mm with one decimal place.</li>
+<li>A pallet without a mix (<code>summary.mix</code> false): one product type, <code>id</code> 1, and the products in the moves have no field
+  <code>type</code>.</li>
+<li>Checksum (<code>header.checksum</code>): CRC-32 (8 hex characters) of the JSON without it, keys sorted, no spaces, non-ASCII
+  characters as <code>\uXXXX</code>, whole numbers without <code>.0</code>.</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 7 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

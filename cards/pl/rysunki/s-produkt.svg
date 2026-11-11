@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 64" width="84" height="64" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<title>Symbol: produkt w orientacji 0 z etykietą</title>
+<g transform="translate(42 32) rotate(0)" data-rotation="0">
+<rect x="-22.5" y="-26.1" width="45" height="52.2" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-19.35" y="-24.21" width="38.7" height="3.47" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="15.75" y="-10.44" width="2.7" height="20.88" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+</svg>

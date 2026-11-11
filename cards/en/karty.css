@@ -1,0 +1,259 @@
+/* OpenPallet cards: one A4 page per card in print, a readable column on screen. */
+
+:root {
+  --tekst: #1f1f1f;
+  --tekst2: #555555;
+  --akcent: #7b2fa0;
+  --linia: #d8d2c4;
+  --tlo-karty: #ffffff;
+  --tlo-strony: #eceae4;
+  --kod: #f4f1ea;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--tlo-strony); }
+
+body {
+  margin: 0;
+  padding: 16px;
+  color: var(--tekst);
+  background: var(--tlo-strony);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  line-height: 1.38;
+}
+
+.karta {
+  position: relative;
+  max-width: 210mm;
+  margin: 0 auto 16px;
+  padding: 12mm 13mm 14mm;
+  background: var(--tlo-karty);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+
+.karta header {
+  display: flex;
+  align-items: baseline;
+  gap: 4mm;
+  border-bottom: 2px solid var(--akcent);
+  padding-bottom: 2mm;
+  margin-bottom: 3mm;
+}
+
+.karta header .nr {
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--akcent);
+  line-height: 1;
+}
+
+.karta header h1 {
+  margin: 0;
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.karta header .marka {
+  margin-left: auto;
+  font-size: 8.5pt;
+  color: var(--tekst2);
+  white-space: nowrap;
+}
+
+.regula {
+  margin: 0 0 3.5mm;
+  padding: 2mm 3mm;
+  border-left: 4px solid var(--akcent);
+  background: #f6f0f9;
+  font-size: 11pt;
+  font-weight: 600;
+}
+
+/* title and rule beside the small compass of the directions */
+.glowa {
+  display: grid;
+  grid-template-columns: 1fr 24mm;
+  gap: 4mm;
+  align-items: start;
+  margin: 0 0 3.5mm;
+}
+
+.glowa .regula { margin-bottom: 0; }
+.glowa .kompas { display: block; width: 24mm; height: auto; }
+
+p { margin: 0 0 2.5mm; }
+
+/* card 1: the legend of the symbols, a small table of directions */
+.legenda table { font-size: 8.6pt; }
+.legenda td:first-child { width: 19mm; padding: 0.6mm 1mm; vertical-align: middle; }
+.legenda td:first-child img { display: block; width: 17mm; height: auto; margin: 0 auto; }
+.legenda th:first-child { text-align: center; }
+.mala table { font-size: 7.8pt; margin-bottom: 1.5mm; }
+.mala th, .mala td { padding: 0.25mm 1.4mm; }
+
+.lead { font-size: 12pt; margin-bottom: 3mm; }
+
+.rzad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
+  align-items: start;
+  margin: 0 0 3mm;
+}
+
+.rzad.jeden { grid-template-columns: 1fr; }
+
+figure { margin: 0; }
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figure.pol img { max-width: 92mm; margin: 0 auto; }
+
+figcaption {
+  margin-top: 1mm;
+  font-size: 8.5pt;
+  color: var(--tekst2);
+}
+
+.dwie {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5mm;
+  align-items: start;
+  margin: 0 0 2mm;
+}
+
+.dwie.lewa { grid-template-columns: 1.2fr 1fr; }
+
+.dwie > div > :last-child { margin-bottom: 0; }
+
+ul { margin: 0 0 2.5mm; padding-left: 4.5mm; }
+li { margin: 0 0 1.2mm; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 2.5mm;
+  font-size: 8.8pt;
+}
+
+th, td {
+  border: 1px solid var(--linia);
+  padding: 0.8mm 1.6mm;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: #f4f1ea; font-weight: 600; }
+
+code {
+  white-space: nowrap;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.92em;
+  background: var(--kod);
+  padding: 0 0.6mm;
+  border-radius: 2px;
+}
+
+pre {
+  margin: 0 0 3mm;
+  padding: 2mm 3mm;
+  background: var(--kod);
+  border-radius: 3px;
+  font-size: 7.6pt;
+  line-height: 1.3;
+  overflow-x: auto;
+}
+
+pre code { background: none; padding: 0; font-size: 1em; }
+
+.wzor {
+  margin: 1mm 0 2.5mm;
+  padding: 2mm 3mm;
+  text-align: center;
+  font-size: 11pt;
+  font-weight: 600;
+  background: var(--kod);
+  border-radius: 3px;
+}
+
+.spis { font-size: 11pt; }
+.spis td:first-child { width: 10mm; font-weight: 700; color: var(--akcent); text-align: center; }
+.spis a { color: var(--tekst); text-decoration: none; }
+.spis a:hover { text-decoration: underline; }
+
+.licencja {
+  margin-top: 6mm;
+  padding-top: 3mm;
+  border-top: 1px solid var(--linia);
+  font-size: 9.5pt;
+}
+
+.karta > footer {
+  position: absolute;
+  left: 13mm;
+  right: 13mm;
+  bottom: 6mm;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.6mm 4mm;
+  font-size: 7.5pt;
+  color: var(--tekst2);
+}
+
+.karta > footer .adres { flex-basis: 100%; }
+.karta > footer .adres a { color: inherit; }
+
+.tytulowa h1 { font-size: 26pt; }
+.tytulowa > header { margin-bottom: 8mm; }
+
+nav.przejscia {
+  max-width: 210mm;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 10pt;
+}
+
+nav.przejscia a { color: var(--akcent); }
+
+a { color: var(--akcent); }
+
+@media screen and (max-width: 760px) {
+  body { padding: 8px; }
+  .karta { padding: 16px 16px 40px; }
+  .rzad, .dwie { grid-template-columns: 1fr; }
+  .glowa { grid-template-columns: 1fr 72px; gap: 8px; }
+  .glowa .kompas { width: 72px; }
+  code { white-space: normal; overflow-wrap: anywhere; }
+  .karta header { flex-wrap: wrap; }
+  .karta header .marka { margin-left: 0; width: 100%; }
+}
+
+@page { size: A4; margin: 0; }
+
+@media print {
+  html, body { background: #ffffff; padding: 0; margin: 0; }
+  nav.przejscia { display: none; }
+  /* min-height, not height with overflow hidden: a card longer than A4 prints a second page,
+     which the page count of tests/test_openpallet_karty.py catches, instead of being cut off */
+  .karta {
+    width: 210mm;
+    min-height: 296mm;
+    max-width: none;
+    margin: 0;
+    box-shadow: none;
+    break-after: page;
+    break-inside: auto;
+  }
+  .karta:last-child { break-after: auto; }
+}

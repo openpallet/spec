@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · karta 1: Układ stanowiska i kierunki</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">spis</a></span><span><a href="02-orientacja.html">następna →</a></span></nav>
+<article class="karta" id="karta-1">
+<header><span class="nr">1</span><h1>Układ stanowiska i kierunki</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Każdy element stanowiska ma własny układ i pozycję normalną. Plik podaje orientacje i położenia względem pozycji normalnej: transportera przy pobraniu, palety przy odłożeniu, jakkolwiek stoją na stanowisku. Układ palety: X w dół rysunku wzdłuż długości (<code>pallet.length</code>), Y w prawo wzdłuż szerokości (<code>pallet.width</code>), Z w górę.</p>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k1-stanowisko.svg" alt="Przykład: Produkt A, warstwa unikalna 1, ruch 1."><figcaption>Przykład: Produkt A, warstwa unikalna 1, ruch 1.</figcaption></figure></div>
+
+<div class="dwie lewa">
+<div class="legenda">
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="robot" src="rysunki/s-robot.svg"></td>
+<td><strong>Robot.</strong> Swój układ (Xr, Yr) ustawia integrator. Program robota umieszcza w nim paletę i transporter.</td>
+</tr>
+<tr>
+<td><img alt="paleta" src="rysunki/s-paleta.svg"></td>
+<td><strong>Paleta.</strong> Początek O w rogu, X wzdłuż długości (także gdy paleta jest szersza niż dłuższa), Y wzdłuż szerokości, Z w górę od desek.</td>
+</tr>
+<tr>
+<td><img alt="transporter" src="rysunki/s-transporter.svg"></td>
+<td><strong>Transporter.</strong> Kierunek jazdy w dół rysunku, koniec transportera (czerwona linia) na dole.</td>
+</tr>
+<tr>
+<td><img alt="chwytak" src="rysunki/s-chwytak.svg"></td>
+<td><strong>Chwytak</strong> w orientacji 0. Trójkąt: przód. Ciemne belki: strony 90 i 270. Koło: kołnierz robota.</td>
+</tr>
+<tr>
+<td><img alt="produkt" src="rysunki/s-produkt.svg"></td>
+<td><strong>Produkt</strong> w orientacji 0. Ciemny pasek: ściana 0 (przód). Niebieski pasek: etykieta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<div class="rzad jeden">
+<figure class="pol" style="width:62%;margin:0 auto"><img src="rysunki/k1-kierunki.svg" alt="Kompas: kierunki co 45 stopni, liczby rosną w lewo."><figcaption>Kompas: kierunki co 45 stopni, liczby rosną w lewo.</figcaption></figure>
+</div>
+<div class="mala">
+<table>
+<thead>
+<tr>
+<th>Kierunek</th>
+<th>Na rysunku</th>
+<th>Wektor (X, Y)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>góra</td>
+<td>(−1, 0)</td>
+</tr>
+<tr>
+<td>45</td>
+<td>góra-lewo</td>
+<td>(−1, −1)</td>
+</tr>
+<tr>
+<td>90</td>
+<td>lewo</td>
+<td>(0, −1)</td>
+</tr>
+<tr>
+<td>135</td>
+<td>dół-lewo</td>
+<td>(+1, −1)</td>
+</tr>
+<tr>
+<td>180</td>
+<td>dół</td>
+<td>(+1, 0)</td>
+</tr>
+<tr>
+<td>225</td>
+<td>dół-prawo</td>
+<td>(+1, +1)</td>
+</tr>
+<tr>
+<td>270</td>
+<td>prawo</td>
+<td>(0, +1)</td>
+</tr>
+<tr>
+<td>315</td>
+<td>góra-prawo</td>
+<td>(−1, +1)</td>
+</tr>
+<tr>
+<td>900</td>
+<td>prosto z góry</td>
+<td>(0, 0)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Orientacja</strong> (0, 90, 180, 270): strona, w którą patrzy przód elementu. 0 to pozycja normalna: produkt stoi
+  tak, jak dojeżdża do końca transportera bez obrotów, chwytak tak, jak najczęściej pobiera.</li>
+<li>Plik podaje tylko orientacje. Jak obrócić chwytak, żeby je bezpiecznie osiągnąć, decyduje program robota.</li>
+<li><strong>Kierunek</strong> (kompas): kierunek odłożenia produktów w układzie palety. <strong>900</strong> = wartość neutralna: prosto
+  z góry (karta 5), bez strony otwarcia oraz środek (karta 4). <strong>999</strong> = nieprzypisane.</li>
+<li><strong>Ruch</strong> (<code>moves[]</code>): produkty, które chwytak bierze i odkłada naraz. Z liczy się od desek palety (karta 6).</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 1 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

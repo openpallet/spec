@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · card 3: Gripper</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">contents</a> · <a href="02-orientation.html">← previous</a></span><span><a href="04-open-side.html">next →</a></span></nav>
+<article class="karta" id="karta-3">
+<div class="glowa"><div><header><span class="nr">3</span><h1>Gripper</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">The gripper at orientation 0 stands with its length along X and its front (the triangle) towards the top of the drawing. At the pick its orientation counts in the conveyor's frame, at the place in the pallet's frame.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<p>We recommend taking the gripper's orientation 0 as the gripper most often picks the products from the conveyor. The
+file gives the outline of the open gripper, whatever its kind: for a jaw gripper, the outline with the jaws fully
+open. The outline is usually larger than the products picked. The open side (90 or 270, card 4) must be free
+when placing: on a jaw gripper it is the side of the moving jaw, on a fork gripper the side the forks slide in
+from.</p>
+<div class="rzad"><figure class="pol"><img src="rysunki/k3-chwytak.svg" alt="Gripper at orientation 0. Outline of the open gripper in mm: length along, width across."><figcaption>Gripper at orientation 0. Outline of the open gripper in mm: length along, width across.</figcaption></figure><figure class="pol"><img src="rysunki/k3-pobranie.svg" alt="Conveyor: travel down the drawing, its end at the bottom. [0]: the product at the conveyor end."><figcaption>Conveyor: travel down the drawing, its end at the bottom. [0]: the product at the conveyor end.</figcaption></figure></div>
+
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k3-orientacje.svg" alt="At the place the gripper can stand at any of the four orientations in the pallet frame."><figcaption>At the place the gripper can stand at any of the four orientations in the pallet frame.</figcaption></figure></div>
+
+<ul>
+<li>Gripper orientation at the pick (<code>gripper_pick_orientation</code>): 0 or 180, in the conveyor's frame.</li>
+<li>Gripper orientation at the place (<code>gripper_place_orientation</code>): 0, 90, 180 or 270, in the pallet frame.</li>
+<li>Products at the pick (<code>products_at_pick</code>): the products in the order they reach the conveyor end, each with its
+  product number (<code>product_id</code>) and its orientation at the pick (<code>orientation</code>). <code>[0]</code> is the product at the
+  conveyor end, then the next ones from the end.</li>
+<li>At orientation 0 the back of the gripper lies at the conveyor end, at orientation 180 its front.</li>
+<li>The allowed gripper orientations at the pick (<code>gripper.allowed_pick_orientation</code>) and at the place
+  (<code>gripper.allowed_place_orientation</code>) are settings of the station.</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 3 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

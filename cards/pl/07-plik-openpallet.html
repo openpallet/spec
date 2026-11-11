@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · karta 7: Plik OpenPallet 1.2</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">spis</a> · <a href="06-stos-i-przekladki.html">← poprzednia</a></span><span></span></nav>
+<article class="karta" id="karta-7">
+<div class="glowa"><div><header><span class="nr">7</span><h1>Plik OpenPallet 1.2</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Plik OpenPallet to JSON. Klucze najwyższego poziomu mają stałą kolejność, a to, co do siebie należy, leży w nich zagnieżdżone: ruchy w warstwie unikalnej, produkty w ruchu.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k7-plik.svg" alt="Struktura pliku w kolejności zapisu. { }: obiekt, [ ]: lista, szary wiersz: pola każdego elementu listy."><figcaption>Struktura pliku w kolejności zapisu. { }: obiekt, [ ]: lista, szary wiersz: pola każdego elementu listy.</figcaption></figure></div>
+
+<ul>
+<li><strong>Rozpoznanie:</strong> <code>format.name</code> = <code>"OpenPallet"</code> i <code>format.version</code> 1.2 albo późniejsze 1.x: czytaj. Inna nazwa
+  albo wersja: odrzuć. Nieznane klucze pomijaj.</li>
+<li>Kolejne wersje 1.x dodają tylko pola nieobowiązkowe: program, który czyta 1.2, przeczyta każdy późniejszy plik 1.x.</li>
+<li>Jednostki: położenia i wymiary w mm, masa w g, orientacje i kierunki w stopniach (liczby całkowite). Grubość
+  przekładki i <code>summary.height</code> w mm z jednym miejscem po przecinku.</li>
+<li>Paleta bez miksu (<code>summary.mix</code> false): jeden typ produktu, <code>id</code> 1, a produkty w ruchach nie mają pola <code>type</code>.</li>
+<li>Suma kontrolna (<code>header.checksum</code>): CRC-32 (8 znaków hex) z JSON-u bez niej, klucze posortowane, bez spacji,
+  znaki spoza ASCII jako <code>\uXXXX</code>, liczby całkowite bez <code>.0</code>.</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 7 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

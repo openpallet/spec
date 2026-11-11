@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · card 4: Open side and alignment</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">contents</a> · <a href="03-gripper.html">← previous</a></span><span><a href="05-placing-direction.html">next →</a></span></nav>
+<article class="karta" id="karta-4">
+<div class="glowa"><div><header><span class="nr">4</span><h1>Open side and alignment</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">The open side (90 or 270) is the side of the gripper that stays free: with the opposite side the gripper sets the products against those already placed. The alignment (0, 180, 900) tells at which end of the gripper the products lie. Both belong to the gripper and count in its frame.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k4-strona-otwarcia.svg" alt="Gripper at orientation 0. Arrow: the open side."><figcaption>Gripper at orientation 0. Arrow: the open side.</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li>Open side (<code>gripper_open_side</code>): 90 or 270. With open side 270 the products lie against side 90, and with that
+  side the gripper sets them against those already placed. Side 270 stays free, unless the station settings
+  say otherwise.</li>
+<li>Jaw gripper: the side of the moving jaw. Fork gripper: the side the forks come in from. Another kind: the side
+  with the parts that could collide with the neighbouring products.</li>
+<li>When both sides move, the station allows both (<code>gripper.allowed_open_side</code>).</li>
+<li><strong>900</strong>: a gripper without an open side (from above). <strong>999</strong>: not assigned.</li>
+<li>Alignment (<code>gripper_align</code>): <strong>0</strong> = products at the gripper's front, <strong>180</strong> = at its back, <strong>900</strong> = in the centre.</li>
+<li>900 is not a direction: in the alignment it means the gripper centred on the products.</li>
+</ul>
+</div>
+</div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k4-wyrownanie.svg" alt="Alignment at the pick. The gripper&#x27;s front is the triangle, its back the opposite end."><figcaption>Alignment at the pick. The gripper's front is the triangle, its back the opposite end.</figcaption></figure></div>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JSON</th>
+<th>PLC (<code>tPlacingData</code>, move data)</th>
+<th>CSV column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>open side</td>
+<td><code>gripper_open_side</code>: 90, 270, 900</td>
+<td><code>i16GripperOpenSide</code>: 90, 270, 900</td>
+<td><code>GripperOpenSide</code></td>
+</tr>
+<tr>
+<td>alignment</td>
+<td><code>gripper_align</code>: 0, 180, 900</td>
+<td><code>i16GripperAlign</code>: 0, 180, 900</td>
+<td><code>GripperAlign</code></td>
+</tr>
+</tbody>
+</table>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 4 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

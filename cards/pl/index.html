@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet: karty standardu</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span></span><span><a href="wszystkie.html">wszystkie karty na jednej stronie</a> · <a href="OpenPallet-karty-pl.pdf">PDF wszystkich kart</a> · <a href="01-uklad-stanowiska.html">następna →</a></span></nav>
+<article class="karta tytulowa" id="karta-0">
+<header><h1>OpenPallet: karty standardu</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="lead">OpenPallet to otwarty format wymiany danych paletyzacji: jeden plik JSON opisuje paletę, produkt,
+przekładki, warstwy i każdy ruch robota.</p>
+
+<p class="lead">Plik OpenPallet 1.2 ma znacznik <code>"format": {"name": "OpenPallet", "version": "1.2"}</code>,
+wszystkie położenia w jednym układzie palety, a każdą orientację i każdy kierunek w stopniach w lewo od góry
+rysunku.</p>
+
+<p class="lead">Te same wartości mają stały zapis dla sterownika i robota (struktura PLC, CSV), więc program PLC
+i robota czyta to, co widać na rysunku.</p>
+
+<table class="spis"><tbody><tr><td>1</td><td><a href="01-uklad-stanowiska.html">Układ stanowiska i kierunki</a></td></tr><tr><td>2</td><td><a href="02-orientacja.html">Orientacja</a></td></tr><tr><td>3</td><td><a href="03-chwytak.html">Chwytak</a></td></tr><tr><td>4</td><td><a href="04-strona-otwarcia.html">Strona otwarcia i wyrównanie</a></td></tr><tr><td>5</td><td><a href="05-kierunek-odlozenia.html">Kierunek odłożenia</a></td></tr><tr><td>6</td><td><a href="06-stos-i-przekladki.html">Stos i przekładki</a></td></tr><tr><td>7</td><td><a href="07-plik-openpallet.html">Plik OpenPallet 1.2</a></td></tr></tbody></table>
+
+<p>Przykład na kartach: paleta z Produktem A (EUR2 1200 × 1000, produkt 290 × 250 × 200, 6 warstw, 48 ruchów).</p>
+<div class="licencja">
+<p><strong>OpenPallet, created and maintained by the makers of PalletDesigner.</strong></p>
+<p>Tekst i rysunki kart: licencja <a href="https://creativecommons.org/licenses/by/4.0/deed.pl">CC BY 4.0</a>. Kopia,
+tłumaczenie i cytat podają autora zdaniem powyżej.</p>
+<p>OpenPallet 1.2 · 10.11.2026 · <a href="https://openpallet.org">openpallet.org</a></p>
+</div>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

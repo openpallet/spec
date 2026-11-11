@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 64" width="84" height="64" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<title>Symbol: robot</title>
+<path d="M 26 38 L 52 14 L 72 26" fill="none" stroke="#59616b" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 26 38 L 52 14 L 72 26" fill="none" stroke="#d3d8de" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="52" cy="14" r="5.5" fill="#d3d8de" stroke="#59616b" stroke-width="1.4"/>
+<circle cx="26" cy="38" r="13" fill="#d3d8de" stroke="#59616b" stroke-width="1.6"/>
+<circle cx="26" cy="38" r="5.46" fill="#59616b"/>
+<circle cx="72" cy="26" r="4" fill="#ffffff" stroke="#7a4a00" stroke-width="1.3"/>
+</svg>

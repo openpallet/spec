@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · card 5: Placing direction</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">contents</a> · <a href="04-open-side.html">← previous</a></span><span><a href="06-stack-and-slip-sheets.html">next →</a></span></nav>
+<article class="karta" id="karta-5">
+<div class="glowa"><div><header><span class="nr">5</span><h1>Placing direction</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">The placing direction is the direction in which the gripper with the products travels in the last phase of its approach to the placing position, counted in the pallet frame. 900 means placing straight down from above.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<div class="rzad"><figure class="pol"><img src="rysunki/k5-najazd.svg" alt="Product A, unique layer 1, move 4: placing direction 45, the products approach moves 2 and 3."><figcaption>Product A, unique layer 1, move 4: placing direction 45, the products approach moves 2 and 3.</figcaption></figure><figure class="pol"><img src="rysunki/k5-niezaleznie.svg" alt="Placing direction 90: the gripper sets the products to the left, against those already placed. It counts in the pallet frame, so it is the same at every gripper orientation."><figcaption>Placing direction 90: the gripper sets the products to the left, against those already placed. It counts in the pallet frame, so it is the same at every gripper orientation.</figcaption></figure></div>
+
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k5-brak.svg" alt="Side view."><figcaption>Side view.</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li><strong>900</strong>: straight down from above, without an approach from the side. <strong>999</strong>: not assigned.</li>
+<li>The robot program sets the height and the length of the approach: the file gives only the direction.</li>
+</ul>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JSON</th>
+<th>PLC (<code>tPlacingData</code>, move data)</th>
+<th>CSV column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>placing direction</td>
+<td><code>placing_direction</code>: 0, 45, 90, … 315</td>
+<td><code>i16PlacingDirection</code>: 0, 45, … 315</td>
+<td><code>PlacingDirection</code></td>
+</tr>
+<tr>
+<td>straight down</td>
+<td>900</td>
+<td>900</td>
+<td>900</td>
+</tr>
+</tbody>
+</table>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 5 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

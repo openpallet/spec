@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet: the standard&#x27;s cards · edition 5e4b82c7351e</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+
+<article class="karta tytulowa" id="karta-0">
+<header><h1>OpenPallet: the standard&#x27;s cards</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="lead">OpenPallet is an open exchange format for palletizing data: one JSON file describes the pallet, the
+product, the slip sheets, the layers and every robot move.</p>
+
+<p class="lead">An OpenPallet 1.2 file carries the mark <code>"format": {"name": "OpenPallet", "version": "1.2"}</code>,
+every position in one pallet frame, and every orientation and every direction in degrees counter-clockwise from the
+top of the drawing.</p>
+
+<p class="lead">The same values have a fixed layout for the controller and the robot (PLC structure, CSV), so the PLC
+and robot program reads what the drawing shows.</p>
+
+<table class="spis"><tbody><tr><td>1</td><td><a href="#karta-1">Station layout and directions</a></td></tr><tr><td>2</td><td><a href="#karta-2">Orientation</a></td></tr><tr><td>3</td><td><a href="#karta-3">Gripper</a></td></tr><tr><td>4</td><td><a href="#karta-4">Open side and alignment</a></td></tr><tr><td>5</td><td><a href="#karta-5">Placing direction</a></td></tr><tr><td>6</td><td><a href="#karta-6">Stack and slip sheets</a></td></tr><tr><td>7</td><td><a href="#karta-7">OpenPallet 1.2 file</a></td></tr></tbody></table>
+
+<p>Example on the cards: a pallet of Product A (EUR2 1200 × 1000, product 290 × 250 × 200, 6 layers, 48 moves).</p>
+<div class="licencja">
+<p><strong>OpenPallet, created and maintained by the makers of PalletDesigner.</strong></p>
+<p>Text and drawings of the cards: licence <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a>. Every copy,
+translation or quotation names the author with the sentence above.</p>
+<p>OpenPallet 1.2 · 2026-11-10 · <a href="https://openpallet.org">openpallet.org</a></p>
+</div>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-1">
+<header><span class="nr">1</span><h1>Station layout and directions</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Every element of the station has its own frame and normal pose. The file gives orientations and positions relative to the normal pose: of the conveyor at the pick, of the pallet at the place, however they stand in the station. Pallet frame: X down the drawing along the length (<code>pallet.length</code>), Y to the right along the width (<code>pallet.width</code>), Z up.</p>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k1-stanowisko.svg" alt="Example: Product A, unique layer 1, move 1."><figcaption>Example: Product A, unique layer 1, move 1.</figcaption></figure></div>
+
+<div class="dwie lewa">
+<div class="legenda">
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="robot" src="rysunki/s-robot.svg"></td>
+<td><strong>Robot.</strong> The integrator sets its frame (Xr, Yr). The robot program places the pallet and the conveyor in it.</td>
+</tr>
+<tr>
+<td><img alt="pallet" src="rysunki/s-paleta.svg"></td>
+<td><strong>Pallet.</strong> Origin O in a corner, X along the length (also when the pallet is wider than long), Y along the width, Z up from the deck boards.</td>
+</tr>
+<tr>
+<td><img alt="conveyor" src="rysunki/s-transporter.svg"></td>
+<td><strong>Conveyor.</strong> Travel down the drawing, the conveyor end (red line) at the bottom.</td>
+</tr>
+<tr>
+<td><img alt="gripper" src="rysunki/s-chwytak.svg"></td>
+<td><strong>Gripper</strong> at orientation 0. Triangle: the front. Dark bars: sides 90 and 270. Circle: the robot's flange.</td>
+</tr>
+<tr>
+<td><img alt="product" src="rysunki/s-produkt.svg"></td>
+<td><strong>Product</strong> at orientation 0. Dark bar: face 0 (the front). Blue bar: the label.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<div class="rzad jeden">
+<figure class="pol" style="width:62%;margin:0 auto"><img src="rysunki/k1-kierunki.svg" alt="Compass: directions every 45 degrees, numbers increase counter-clockwise."><figcaption>Compass: directions every 45 degrees, numbers increase counter-clockwise.</figcaption></figure>
+</div>
+<div class="mala">
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>On the drawing</th>
+<th>Vector (X, Y)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>up</td>
+<td>(−1, 0)</td>
+</tr>
+<tr>
+<td>45</td>
+<td>up-left</td>
+<td>(−1, −1)</td>
+</tr>
+<tr>
+<td>90</td>
+<td>left</td>
+<td>(0, −1)</td>
+</tr>
+<tr>
+<td>135</td>
+<td>down-left</td>
+<td>(+1, −1)</td>
+</tr>
+<tr>
+<td>180</td>
+<td>down</td>
+<td>(+1, 0)</td>
+</tr>
+<tr>
+<td>225</td>
+<td>down-right</td>
+<td>(+1, +1)</td>
+</tr>
+<tr>
+<td>270</td>
+<td>right</td>
+<td>(0, +1)</td>
+</tr>
+<tr>
+<td>315</td>
+<td>up-right</td>
+<td>(−1, +1)</td>
+</tr>
+<tr>
+<td>900</td>
+<td>straight down</td>
+<td>(0, 0)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Orientation</strong> (0, 90, 180, 270): the side the front of an element faces. 0 is the normal pose: the product
+  stands as it reaches the conveyor end without being turned, the gripper as it picks most often.</li>
+<li>The file gives only orientations. How to turn the gripper to reach them safely is the robot program's decision.</li>
+<li><strong>Direction</strong> (compass): the placing direction of the products, in the pallet frame. <strong>900</strong> = neutral:
+  straight down (card 5), no open side and centre (card 4). <strong>999</strong> = not assigned.</li>
+<li><strong>Move</strong> (<code>moves[]</code>): the products the gripper picks and places at once. Z counts from the pallet's deck boards
+  (card 6).</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 1 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-2">
+<div class="glowa"><div><header><span class="nr">2</span><h1>Orientation</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Orientation is the side the front of an element (face 0 of a product, the front of the gripper) faces in the frame it lies in: 0, 90, 180 or 270, as on the compass. Orientation 0 is the normal pose.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<p>A product in the normal pose (orientation 0) stands as it reaches the conveyor end without being turned: its length
+along X, face 0 at the top of the drawing.</p>
+<div class="rzad jeden"><figure class="pelny" style="width:86%;margin:0 auto"><img src="rysunki/k2-orientacje.svg" alt="Numbers beside the faces: the face numbers. Dark bar: face 0."><figcaption>Numbers beside the faces: the face numbers. Dark bar: face 0.</figcaption></figure></div>
+
+<p class="wzor">products at the pick → gripper picks → gripper places → products on the pallet</p>
+
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Field in the file</th>
+<th>Frame</th>
+<th>example 1</th>
+<th>example 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>products at the pick</td>
+<td><code>products_at_pick[k].orientation</code></td>
+<td>conveyor</td>
+<td>270</td>
+<td>90</td>
+</tr>
+<tr>
+<td>gripper picks</td>
+<td><code>gripper_pick_orientation</code></td>
+<td>conveyor</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>gripper places</td>
+<td><code>gripper_place_orientation</code></td>
+<td>pallet</td>
+<td>90</td>
+<td>90</td>
+</tr>
+<tr>
+<td>products on the pallet</td>
+<td><code>products[].orientation</code></td>
+<td>pallet</td>
+<td>0</td>
+<td>180</td>
+</tr>
+</tbody>
+</table>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k2-przyklad.svg" alt="The drawing shows example 1: Product A, unique layer 1, move 1. Example 2 is move 4 of unique layer 2."><figcaption>The drawing shows example 1: Product A, unique layer 1, move 1. Example 2 is move 4 of unique layer 2.</figcaption></figure></div>
+
+<div class="dwie">
+<div>
+<ul>
+<li>The product turns together with the gripper. The file gives all four orientations of a move: nothing has to be
+  computed.</li>
+<li>The controller (PLC) gets the orientations at the pick and both orientations of the gripper. It does not need the
+  orientation on the pallet: the products lie as the gripper placed them.</li>
+<li>The faces with a label (<code>label_sides</code> of the product type) are given in the normal pose, Product A: <code>[270]</code>.</li>
+</ul>
+</div>
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k2-etykieta.svg" alt="The label of Product A (face 270) turns together with the product."><figcaption>The label of Product A (face 270) turns together with the product.</figcaption></figure>
+</div>
+</div>
+</div>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 2 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-3">
+<div class="glowa"><div><header><span class="nr">3</span><h1>Gripper</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">The gripper at orientation 0 stands with its length along X and its front (the triangle) towards the top of the drawing. At the pick its orientation counts in the conveyor's frame, at the place in the pallet's frame.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<p>We recommend taking the gripper's orientation 0 as the gripper most often picks the products from the conveyor. The
+file gives the outline of the open gripper, whatever its kind: for a jaw gripper, the outline with the jaws fully
+open. The outline is usually larger than the products picked. The open side (90 or 270, card 4) must be free
+when placing: on a jaw gripper it is the side of the moving jaw, on a fork gripper the side the forks slide in
+from.</p>
+<div class="rzad"><figure class="pol"><img src="rysunki/k3-chwytak.svg" alt="Gripper at orientation 0. Outline of the open gripper in mm: length along, width across."><figcaption>Gripper at orientation 0. Outline of the open gripper in mm: length along, width across.</figcaption></figure><figure class="pol"><img src="rysunki/k3-pobranie.svg" alt="Conveyor: travel down the drawing, its end at the bottom. [0]: the product at the conveyor end."><figcaption>Conveyor: travel down the drawing, its end at the bottom. [0]: the product at the conveyor end.</figcaption></figure></div>
+
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k3-orientacje.svg" alt="At the place the gripper can stand at any of the four orientations in the pallet frame."><figcaption>At the place the gripper can stand at any of the four orientations in the pallet frame.</figcaption></figure></div>
+
+<ul>
+<li>Gripper orientation at the pick (<code>gripper_pick_orientation</code>): 0 or 180, in the conveyor's frame.</li>
+<li>Gripper orientation at the place (<code>gripper_place_orientation</code>): 0, 90, 180 or 270, in the pallet frame.</li>
+<li>Products at the pick (<code>products_at_pick</code>): the products in the order they reach the conveyor end, each with its
+  product number (<code>product_id</code>) and its orientation at the pick (<code>orientation</code>). <code>[0]</code> is the product at the
+  conveyor end, then the next ones from the end.</li>
+<li>At orientation 0 the back of the gripper lies at the conveyor end, at orientation 180 its front.</li>
+<li>The allowed gripper orientations at the pick (<code>gripper.allowed_pick_orientation</code>) and at the place
+  (<code>gripper.allowed_place_orientation</code>) are settings of the station.</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 3 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-4">
+<div class="glowa"><div><header><span class="nr">4</span><h1>Open side and alignment</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">The open side (90 or 270) is the side of the gripper that stays free: with the opposite side the gripper sets the products against those already placed. The alignment (0, 180, 900) tells at which end of the gripper the products lie. Both belong to the gripper and count in its frame.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k4-strona-otwarcia.svg" alt="Gripper at orientation 0. Arrow: the open side."><figcaption>Gripper at orientation 0. Arrow: the open side.</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li>Open side (<code>gripper_open_side</code>): 90 or 270. With open side 270 the products lie against side 90, and with that
+  side the gripper sets them against those already placed. Side 270 stays free, unless the station settings
+  say otherwise.</li>
+<li>Jaw gripper: the side of the moving jaw. Fork gripper: the side the forks come in from. Another kind: the side
+  with the parts that could collide with the neighbouring products.</li>
+<li>When both sides move, the station allows both (<code>gripper.allowed_open_side</code>).</li>
+<li><strong>900</strong>: a gripper without an open side (from above). <strong>999</strong>: not assigned.</li>
+<li>Alignment (<code>gripper_align</code>): <strong>0</strong> = products at the gripper's front, <strong>180</strong> = at its back, <strong>900</strong> = in the centre.</li>
+<li>900 is not a direction: in the alignment it means the gripper centred on the products.</li>
+</ul>
+</div>
+</div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k4-wyrownanie.svg" alt="Alignment at the pick. The gripper&#x27;s front is the triangle, its back the opposite end."><figcaption>Alignment at the pick. The gripper's front is the triangle, its back the opposite end.</figcaption></figure></div>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JSON</th>
+<th>PLC (<code>tPlacingData</code>, move data)</th>
+<th>CSV column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>open side</td>
+<td><code>gripper_open_side</code>: 90, 270, 900</td>
+<td><code>i16GripperOpenSide</code>: 90, 270, 900</td>
+<td><code>GripperOpenSide</code></td>
+</tr>
+<tr>
+<td>alignment</td>
+<td><code>gripper_align</code>: 0, 180, 900</td>
+<td><code>i16GripperAlign</code>: 0, 180, 900</td>
+<td><code>GripperAlign</code></td>
+</tr>
+</tbody>
+</table>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 4 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-5">
+<div class="glowa"><div><header><span class="nr">5</span><h1>Placing direction</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">The placing direction is the direction in which the gripper with the products travels in the last phase of its approach to the placing position, counted in the pallet frame. 900 means placing straight down from above.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<div class="rzad"><figure class="pol"><img src="rysunki/k5-najazd.svg" alt="Product A, unique layer 1, move 4: placing direction 45, the products approach moves 2 and 3."><figcaption>Product A, unique layer 1, move 4: placing direction 45, the products approach moves 2 and 3.</figcaption></figure><figure class="pol"><img src="rysunki/k5-niezaleznie.svg" alt="Placing direction 90: the gripper sets the products to the left, against those already placed. It counts in the pallet frame, so it is the same at every gripper orientation."><figcaption>Placing direction 90: the gripper sets the products to the left, against those already placed. It counts in the pallet frame, so it is the same at every gripper orientation.</figcaption></figure></div>
+
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k5-brak.svg" alt="Side view."><figcaption>Side view.</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li><strong>900</strong>: straight down from above, without an approach from the side. <strong>999</strong>: not assigned.</li>
+<li>The robot program sets the height and the length of the approach: the file gives only the direction.</li>
+</ul>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JSON</th>
+<th>PLC (<code>tPlacingData</code>, move data)</th>
+<th>CSV column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>placing direction</td>
+<td><code>placing_direction</code>: 0, 45, 90, … 315</td>
+<td><code>i16PlacingDirection</code>: 0, 45, … 315</td>
+<td><code>PlacingDirection</code></td>
+</tr>
+<tr>
+<td>straight down</td>
+<td>900</td>
+<td>900</td>
+<td>900</td>
+</tr>
+</tbody>
+</table>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 5 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-6">
+<div class="glowa"><div><header><span class="nr">6</span><h1>Stack and slip sheets</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">The stack (<code>stack</code>) lays the layers from the pallet up, each with a slip sheet or without one. Z counts from the pallet's deck boards, so the robot adds the height of the empty pallet (<code>pallet.height</code>) itself.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k6-stos.svg" alt="Example: two slip sheet types, three layers, product height 200 mm. Z in mm from the pallet&#x27;s deck boards."><figcaption>Example: two slip sheet types, three layers, product height 200 mm. Z in mm from the pallet's deck boards.</figcaption></figure></div>
+
+<p class="wzor">Z(K) = (K − 1) × product height + thicknesses of the slip sheets under layer K<br>
+summary.height = pallet.height + layers + all slip sheets</p>
+
+<p>Another pallet height changes only <code>pallet.height</code> and <code>summary.height</code>. The Z of the layers stays, as it counts from
+the deck boards.</p>
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k6-kolejnosc.svg" alt="Product A, unique layer 1: the moves and the envelope of move 1 (the rectangle around its products)."><figcaption>Product A, unique layer 1: the moves and the envelope of move 1 (the rectangle around its products).</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li>Slip sheet: a sheet on the pallet, between layers or on top.</li>
+<li>A stack position names a unique layer (<code>layout</code> = <code>id</code> from <code>layouts</code>) and the slip sheet lying on it
+  (<code>slip_sheet</code> = <code>id</code> from <code>slip_sheet_types</code>). No <code>slip_sheet</code>: no slip sheet.</li>
+<li>A slip sheet type (<code>slip_sheet_types</code>, up to 10 types) has only a thickness (<code>thickness</code>): how much the slip sheet
+  raises the next layer. The integrator sets its size and material.</li>
+<li>A unique layer (<code>layouts[]</code>): a layer pattern written once. The stack uses it in many layers of the pallet.</li>
+<li>A product of a move (<code>products[]</code>): <code>x</code>, <code>y</code> = the corner with the smaller X and Y, <code>size_x</code>, <code>size_y</code> = its size
+  along X and Y.</li>
+<li>The centre of a move for the PLC (<code>tPlacingData</code>) is in whole numbers: trunc cuts off the fraction.</li>
+</ul>
+</div>
+</div>
+<p class="wzor"><code>i16MiddleX</code> = trunc((<code>x_min</code> + <code>x_max</code>) / 2) &nbsp;&nbsp; <code>i16MiddleY</code> = trunc((<code>y_min</code> + <code>y_max</code>) / 2)</p>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 6 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-7">
+<div class="glowa"><div><header><span class="nr">7</span><h1>OpenPallet 1.2 file</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">An OpenPallet file is JSON. Its top-level keys have a fixed order, and what belongs together lies nested in them: the moves in the unique layer, the products in the move.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k7-plik.svg" alt="Structure of the file in the order of writing. { }: object, [ ]: list, grey row: the fields of every item of the list."><figcaption>Structure of the file in the order of writing. { }: object, [ ]: list, grey row: the fields of every item of the list.</figcaption></figure></div>
+
+<ul>
+<li><strong>Recognition:</strong> <code>format.name</code> = <code>"OpenPallet"</code> and <code>format.version</code> 1.2 or a later 1.x: read. Another name or
+  version: reject. Skip unknown keys.</li>
+<li>Later 1.x versions add only optional fields: a program that reads 1.2 reads every later 1.x file.</li>
+<li>Units: positions and sizes in mm, mass in g, orientations and directions in degrees (whole numbers). Slip sheet
+  thickness and <code>summary.height</code> in mm with one decimal place.</li>
+<li>A pallet without a mix (<code>summary.mix</code> false): one product type, <code>id</code> 1, and the products in the moves have no field
+  <code>type</code>.</li>
+<li>Checksum (<code>header.checksum</code>): CRC-32 (8 hex characters) of the JSON without it, keys sorted, no spaces, non-ASCII
+  characters as <code>\uXXXX</code>, whole numbers without <code>.0</code>.</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 7 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

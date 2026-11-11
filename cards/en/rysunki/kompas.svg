@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112" width="112" height="112" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<title>Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise</title>
+<line x1="56" y1="52" x2="56" y2="37.5" stroke="#7b2fa0" stroke-width="1.8" stroke-linecap="butt" data-direction="0"/>
+<polygon points="56,32 59.15,39 52.85,39" fill="#7b2fa0"/>
+<text x="56" y="24.62" font-size="12.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">0</text>
+<line x1="53.17" y1="53.17" x2="42.92" y2="42.92" stroke="#7b2fa0" stroke-width="1.8" stroke-linecap="butt" data-direction="45"/>
+<polygon points="39.03,39.03 46.21,41.75 41.75,46.21" fill="#7b2fa0"/>
+<text x="28.86" y="33.36" font-size="12.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">45</text>
+<line x1="52" y1="56" x2="37.5" y2="56" stroke="#7b2fa0" stroke-width="1.8" stroke-linecap="butt" data-direction="90"/>
+<polygon points="32,56 39,52.85 39,59.15" fill="#7b2fa0"/>
+<text x="10.75" y="60.5" font-size="12.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">90</text>
+<line x1="53.17" y1="58.83" x2="42.92" y2="69.08" stroke="#7b2fa0" stroke-width="1.8" stroke-linecap="butt" data-direction="135"/>
+<polygon points="39.03,72.97 41.75,65.79 46.21,70.25" fill="#7b2fa0"/>
+<text x="28.86" y="87.64" font-size="12.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">135</text>
+<line x1="56" y1="60" x2="56" y2="74.5" stroke="#7b2fa0" stroke-width="1.8" stroke-linecap="butt" data-direction="180"/>
+<polygon points="56,80 52.85,73 59.15,73" fill="#7b2fa0"/>
+<text x="56" y="96.38" font-size="12.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">180</text>
+<line x1="58.83" y1="58.83" x2="69.08" y2="69.08" stroke="#7b2fa0" stroke-width="1.8" stroke-linecap="butt" data-direction="225"/>
+<polygon points="72.97,72.97 65.79,70.25 70.25,65.79" fill="#7b2fa0"/>
+<text x="83.14" y="87.64" font-size="12.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">225</text>
+<line x1="60" y1="56" x2="74.5" y2="56" stroke="#7b2fa0" stroke-width="1.8" stroke-linecap="butt" data-direction="270"/>
+<polygon points="80,56 73,59.15 73,52.85" fill="#7b2fa0"/>
+<text x="101.25" y="60.5" font-size="12.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">270</text>
+<line x1="58.83" y1="53.17" x2="69.08" y2="42.92" stroke="#7b2fa0" stroke-width="1.8" stroke-linecap="butt" data-direction="315"/>
+<polygon points="72.97,39.03 70.25,46.21 65.79,41.75" fill="#7b2fa0"/>
+<text x="83.14" y="33.36" font-size="12.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">315</text>
+<circle cx="56" cy="56" r="3.2" fill="#1f1f1f"/>
+</svg>

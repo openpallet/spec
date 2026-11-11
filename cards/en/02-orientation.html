@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · card 2: Orientation</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">contents</a> · <a href="01-station-layout.html">← previous</a></span><span><a href="03-gripper.html">next →</a></span></nav>
+<article class="karta" id="karta-2">
+<div class="glowa"><div><header><span class="nr">2</span><h1>Orientation</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Orientation is the side the front of an element (face 0 of a product, the front of the gripper) faces in the frame it lies in: 0, 90, 180 or 270, as on the compass. Orientation 0 is the normal pose.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Compass: directions every 45 degrees, 0 at the top, numbers increase counter-clockwise"></div>
+<p>A product in the normal pose (orientation 0) stands as it reaches the conveyor end without being turned: its length
+along X, face 0 at the top of the drawing.</p>
+<div class="rzad jeden"><figure class="pelny" style="width:86%;margin:0 auto"><img src="rysunki/k2-orientacje.svg" alt="Numbers beside the faces: the face numbers. Dark bar: face 0."><figcaption>Numbers beside the faces: the face numbers. Dark bar: face 0.</figcaption></figure></div>
+
+<p class="wzor">products at the pick → gripper picks → gripper places → products on the pallet</p>
+
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Field in the file</th>
+<th>Frame</th>
+<th>example 1</th>
+<th>example 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>products at the pick</td>
+<td><code>products_at_pick[k].orientation</code></td>
+<td>conveyor</td>
+<td>270</td>
+<td>90</td>
+</tr>
+<tr>
+<td>gripper picks</td>
+<td><code>gripper_pick_orientation</code></td>
+<td>conveyor</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>gripper places</td>
+<td><code>gripper_place_orientation</code></td>
+<td>pallet</td>
+<td>90</td>
+<td>90</td>
+</tr>
+<tr>
+<td>products on the pallet</td>
+<td><code>products[].orientation</code></td>
+<td>pallet</td>
+<td>0</td>
+<td>180</td>
+</tr>
+</tbody>
+</table>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k2-przyklad.svg" alt="The drawing shows example 1: Product A, unique layer 1, move 1. Example 2 is move 4 of unique layer 2."><figcaption>The drawing shows example 1: Product A, unique layer 1, move 1. Example 2 is move 4 of unique layer 2.</figcaption></figure></div>
+
+<div class="dwie">
+<div>
+<ul>
+<li>The product turns together with the gripper. The file gives all four orientations of a move: nothing has to be
+  computed.</li>
+<li>The controller (PLC) gets the orientations at the pick and both orientations of the gripper. It does not need the
+  orientation on the pallet: the products lie as the gripper placed them.</li>
+<li>The faces with a label (<code>label_sides</code> of the product type) are given in the normal pose, Product A: <code>[270]</code>.</li>
+</ul>
+</div>
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k2-etykieta.svg" alt="The label of Product A (face 270) turns together with the product."><figcaption>The label of Product A (face 270) turns together with the product.</figcaption></figure>
+</div>
+</div>
+</div>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 2 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

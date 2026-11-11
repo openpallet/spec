@@ -1,0 +1,82 @@
+{
+  "version": "1.2",
+  "edition": "5e4b82c7351e",
+  "language": "en",
+  "attribution": "OpenPallet, created and maintained by the makers of PalletDesigner",
+  "licence": "CC-BY-4.0",
+  "pdf": "OpenPallet-cards-en.pdf",
+  "cards": [
+    {
+      "number": 1,
+      "title": "Station layout and directions",
+      "rule": "Every element of the station has its own frame and normal pose. The file gives orientations and positions relative to the normal pose: of the conveyor at the pick, of the pallet at the place, however they stand in the station. Pallet frame: X down the drawing along the length (pallet.length), Y to the right along the width (pallet.width), Z up.",
+      "page": "01-station-layout.html",
+      "drawings": [
+        "rysunki/k1-stanowisko.svg",
+        "rysunki/k1-kierunki.svg"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Orientation",
+      "rule": "Orientation is the side the front of an element (face 0 of a product, the front of the gripper) faces in the frame it lies in: 0, 90, 180 or 270, as on the compass. Orientation 0 is the normal pose.",
+      "page": "02-orientation.html",
+      "drawings": [
+        "rysunki/k2-orientacje.svg",
+        "rysunki/k2-przyklad.svg",
+        "rysunki/k2-etykieta.svg"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Gripper",
+      "rule": "The gripper at orientation 0 stands with its length along X and its front (the triangle) towards the top of the drawing. At the pick its orientation counts in the conveyor's frame, at the place in the pallet's frame.",
+      "page": "03-gripper.html",
+      "drawings": [
+        "rysunki/k3-chwytak.svg",
+        "rysunki/k3-pobranie.svg",
+        "rysunki/k3-orientacje.svg"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Open side and alignment",
+      "rule": "The open side (90 or 270) is the side of the gripper that stays free: with the opposite side the gripper sets the products against those already placed. The alignment (0, 180, 900) tells at which end of the gripper the products lie. Both belong to the gripper and count in its frame.",
+      "page": "04-open-side.html",
+      "drawings": [
+        "rysunki/k4-strona-otwarcia.svg",
+        "rysunki/k4-wyrownanie.svg"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Placing direction",
+      "rule": "The placing direction is the direction in which the gripper with the products travels in the last phase of its approach to the placing position, counted in the pallet frame. 900 means placing straight down from above.",
+      "page": "05-placing-direction.html",
+      "drawings": [
+        "rysunki/k5-najazd.svg",
+        "rysunki/k5-niezaleznie.svg",
+        "rysunki/k5-brak.svg"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Stack and slip sheets",
+      "rule": "The stack (stack) lays the layers from the pallet up, each with a slip sheet or without one. Z counts from the pallet's deck boards, so the robot adds the height of the empty pallet (pallet.height) itself.",
+      "page": "06-stack-and-slip-sheets.html",
+      "drawings": [
+        "rysunki/k6-stos.svg",
+        "rysunki/k6-kolejnosc.svg"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "OpenPallet 1.2 file",
+      "rule": "An OpenPallet file is JSON. Its top-level keys have a fixed order, and what belongs together lies nested in them: the moves in the unique layer, the products in the move.",
+      "page": "07-openpallet-file.html",
+      "drawings": [
+        "rysunki/k7-plik.svg"
+      ]
+    }
+  ]
+}

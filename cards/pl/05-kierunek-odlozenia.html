@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · karta 5: Kierunek odłożenia</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">spis</a> · <a href="04-strona-otwarcia.html">← poprzednia</a></span><span><a href="06-stos-i-przekladki.html">następna →</a></span></nav>
+<article class="karta" id="karta-5">
+<div class="glowa"><div><header><span class="nr">5</span><h1>Kierunek odłożenia</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Kierunek odłożenia to kierunek, w którym chwytak z produktami jedzie w ostatniej fazie dojazdu do pozycji odłożenia, liczony w układzie palety. 900 oznacza odłożenie prosto z góry.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<div class="rzad"><figure class="pol"><img src="rysunki/k5-najazd.svg" alt="Produkt A, warstwa unikalna 1, ruch 4: kierunek odłożenia 45, produkty dojeżdżają do ruchów 2 i 3."><figcaption>Produkt A, warstwa unikalna 1, ruch 4: kierunek odłożenia 45, produkty dojeżdżają do ruchów 2 i 3.</figcaption></figure><figure class="pol"><img src="rysunki/k5-niezaleznie.svg" alt="Kierunek odłożenia 90: chwytak dostawia produkty w lewo, do już odłożonych. Liczy się w układzie palety, więc jest ten sam przy każdej orientacji chwytaka."><figcaption>Kierunek odłożenia 90: chwytak dostawia produkty w lewo, do już odłożonych. Liczy się w układzie palety, więc jest ten sam przy każdej orientacji chwytaka.</figcaption></figure></div>
+
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k5-brak.svg" alt="Widok z boku."><figcaption>Widok z boku.</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li><strong>900</strong>: prosto z góry, bez dojazdu z boku. <strong>999</strong>: nieprzypisane.</li>
+<li>Wysokość i długość dojazdu ustawia program robota: plik podaje tylko kierunek.</li>
+</ul>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JSON</th>
+<th>PLC (<code>tPlacingData</code>, dane ruchu)</th>
+<th>kolumna CSV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kierunek odłożenia</td>
+<td><code>placing_direction</code>: 0, 45, 90, … 315</td>
+<td><code>i16PlacingDirection</code>: 0, 45, … 315</td>
+<td><code>PlacingDirection</code></td>
+</tr>
+<tr>
+<td>prosto z góry</td>
+<td>900</td>
+<td>900</td>
+<td>900</td>
+</tr>
+</tbody>
+</table>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 5 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

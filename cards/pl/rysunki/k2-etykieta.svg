@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 156" width="340" height="156" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<title>Etykieta obraca się razem z produktem</title>
+<g transform="translate(84 62) rotate(0)" data-rotation="0">
+<rect x="-35" y="-40.6" width="70" height="81.2" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-30.1" y="-37.66" width="60.2" height="5.39" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="24.5" y="-16.24" width="4.2" height="32.48" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+<line x1="123" y1="62" x2="142.5" y2="62" stroke="#1e88e5" stroke-width="2.2" stroke-linecap="butt" data-direction="270"/>
+<polygon points="149,62 141,65.6 141,58.4" fill="#1e88e5"/>
+<text x="84" y="128" font-size="11.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">produkt w orientacji 0</text>
+<text x="84" y="144" font-size="10.5" fill="#1e88e5" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">etykieta patrzy w prawo</text>
+<g transform="translate(260 62) rotate(-180)" data-rotation="180">
+<rect x="-35" y="-40.6" width="70" height="81.2" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-30.1" y="-37.66" width="60.2" height="5.39" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="24.5" y="-16.24" width="4.2" height="32.48" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+<line x1="221" y1="62" x2="201.5" y2="62" stroke="#1e88e5" stroke-width="2.2" stroke-linecap="butt" data-direction="90"/>
+<polygon points="195,62 203,58.4 203,65.6" fill="#1e88e5"/>
+<text x="260" y="128" font-size="11.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">produkt w orientacji 180</text>
+<text x="260" y="144" font-size="10.5" fill="#1e88e5" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">etykieta patrzy w lewo</text>
+</svg>

@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet: karty standardu · wydanie 7a5630949508</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+
+<article class="karta tytulowa" id="karta-0">
+<header><h1>OpenPallet: karty standardu</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="lead">OpenPallet to otwarty format wymiany danych paletyzacji: jeden plik JSON opisuje paletę, produkt,
+przekładki, warstwy i każdy ruch robota.</p>
+
+<p class="lead">Plik OpenPallet 1.2 ma znacznik <code>"format": {"name": "OpenPallet", "version": "1.2"}</code>,
+wszystkie położenia w jednym układzie palety, a każdą orientację i każdy kierunek w stopniach w lewo od góry
+rysunku.</p>
+
+<p class="lead">Te same wartości mają stały zapis dla sterownika i robota (struktura PLC, CSV), więc program PLC
+i robota czyta to, co widać na rysunku.</p>
+
+<table class="spis"><tbody><tr><td>1</td><td><a href="#karta-1">Układ stanowiska i kierunki</a></td></tr><tr><td>2</td><td><a href="#karta-2">Orientacja</a></td></tr><tr><td>3</td><td><a href="#karta-3">Chwytak</a></td></tr><tr><td>4</td><td><a href="#karta-4">Strona otwarcia i wyrównanie</a></td></tr><tr><td>5</td><td><a href="#karta-5">Kierunek odłożenia</a></td></tr><tr><td>6</td><td><a href="#karta-6">Stos i przekładki</a></td></tr><tr><td>7</td><td><a href="#karta-7">Plik OpenPallet 1.2</a></td></tr></tbody></table>
+
+<p>Przykład na kartach: paleta z Produktem A (EUR2 1200 × 1000, produkt 290 × 250 × 200, 6 warstw, 48 ruchów).</p>
+<div class="licencja">
+<p><strong>OpenPallet, created and maintained by the makers of PalletDesigner.</strong></p>
+<p>Tekst i rysunki kart: licencja <a href="https://creativecommons.org/licenses/by/4.0/deed.pl">CC BY 4.0</a>. Kopia,
+tłumaczenie i cytat podają autora zdaniem powyżej.</p>
+<p>OpenPallet 1.2 · 10.11.2026 · <a href="https://openpallet.org">openpallet.org</a></p>
+</div>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-1">
+<header><span class="nr">1</span><h1>Układ stanowiska i kierunki</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Każdy element stanowiska ma własny układ i pozycję normalną. Plik podaje orientacje i położenia względem pozycji normalnej: transportera przy pobraniu, palety przy odłożeniu, jakkolwiek stoją na stanowisku. Układ palety: X w dół rysunku wzdłuż długości (<code>pallet.length</code>), Y w prawo wzdłuż szerokości (<code>pallet.width</code>), Z w górę.</p>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k1-stanowisko.svg" alt="Przykład: Produkt A, warstwa unikalna 1, ruch 1."><figcaption>Przykład: Produkt A, warstwa unikalna 1, ruch 1.</figcaption></figure></div>
+
+<div class="dwie lewa">
+<div class="legenda">
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="robot" src="rysunki/s-robot.svg"></td>
+<td><strong>Robot.</strong> Swój układ (Xr, Yr) ustawia integrator. Program robota umieszcza w nim paletę i transporter.</td>
+</tr>
+<tr>
+<td><img alt="paleta" src="rysunki/s-paleta.svg"></td>
+<td><strong>Paleta.</strong> Początek O w rogu, X wzdłuż długości (także gdy paleta jest szersza niż dłuższa), Y wzdłuż szerokości, Z w górę od desek.</td>
+</tr>
+<tr>
+<td><img alt="transporter" src="rysunki/s-transporter.svg"></td>
+<td><strong>Transporter.</strong> Kierunek jazdy w dół rysunku, koniec transportera (czerwona linia) na dole.</td>
+</tr>
+<tr>
+<td><img alt="chwytak" src="rysunki/s-chwytak.svg"></td>
+<td><strong>Chwytak</strong> w orientacji 0. Trójkąt: przód. Ciemne belki: strony 90 i 270. Koło: kołnierz robota.</td>
+</tr>
+<tr>
+<td><img alt="produkt" src="rysunki/s-produkt.svg"></td>
+<td><strong>Produkt</strong> w orientacji 0. Ciemny pasek: ściana 0 (przód). Niebieski pasek: etykieta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<div class="rzad jeden">
+<figure class="pol" style="width:62%;margin:0 auto"><img src="rysunki/k1-kierunki.svg" alt="Kompas: kierunki co 45 stopni, liczby rosną w lewo."><figcaption>Kompas: kierunki co 45 stopni, liczby rosną w lewo.</figcaption></figure>
+</div>
+<div class="mala">
+<table>
+<thead>
+<tr>
+<th>Kierunek</th>
+<th>Na rysunku</th>
+<th>Wektor (X, Y)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>góra</td>
+<td>(−1, 0)</td>
+</tr>
+<tr>
+<td>45</td>
+<td>góra-lewo</td>
+<td>(−1, −1)</td>
+</tr>
+<tr>
+<td>90</td>
+<td>lewo</td>
+<td>(0, −1)</td>
+</tr>
+<tr>
+<td>135</td>
+<td>dół-lewo</td>
+<td>(+1, −1)</td>
+</tr>
+<tr>
+<td>180</td>
+<td>dół</td>
+<td>(+1, 0)</td>
+</tr>
+<tr>
+<td>225</td>
+<td>dół-prawo</td>
+<td>(+1, +1)</td>
+</tr>
+<tr>
+<td>270</td>
+<td>prawo</td>
+<td>(0, +1)</td>
+</tr>
+<tr>
+<td>315</td>
+<td>góra-prawo</td>
+<td>(−1, +1)</td>
+</tr>
+<tr>
+<td>900</td>
+<td>prosto z góry</td>
+<td>(0, 0)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Orientacja</strong> (0, 90, 180, 270): strona, w którą patrzy przód elementu. 0 to pozycja normalna: produkt stoi
+  tak, jak dojeżdża do końca transportera bez obrotów, chwytak tak, jak najczęściej pobiera.</li>
+<li>Plik podaje tylko orientacje. Jak obrócić chwytak, żeby je bezpiecznie osiągnąć, decyduje program robota.</li>
+<li><strong>Kierunek</strong> (kompas): kierunek odłożenia produktów w układzie palety. <strong>900</strong> = wartość neutralna: prosto
+  z góry (karta 5), bez strony otwarcia oraz środek (karta 4). <strong>999</strong> = nieprzypisane.</li>
+<li><strong>Ruch</strong> (<code>moves[]</code>): produkty, które chwytak bierze i odkłada naraz. Z liczy się od desek palety (karta 6).</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 1 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-2">
+<div class="glowa"><div><header><span class="nr">2</span><h1>Orientacja</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Orientacja to strona, w którą patrzy przód elementu (ściana 0 produktu, przód chwytaka) w układzie, w którym leży: 0, 90, 180 albo 270, jak na kompasie. Orientacja 0 to pozycja normalna.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<p>Produkt w pozycji normalnej (orientacja 0) stoi tak, jak dojeżdża do końca transportera bez obrotów: długość wzdłuż
+X, ściana 0 u góry rysunku.</p>
+<div class="rzad jeden"><figure class="pelny" style="width:86%;margin:0 auto"><img src="rysunki/k2-orientacje.svg" alt="Liczby przy ścianach: numery ścian. Ciemny pasek: ściana 0."><figcaption>Liczby przy ścianach: numery ścian. Ciemny pasek: ściana 0.</figcaption></figure></div>
+
+<p class="wzor">produkty przy pobraniu → chwytak pobiera → chwytak odkłada → produkty na palecie</p>
+
+<table>
+<thead>
+<tr>
+<th>Krok</th>
+<th>Pole w pliku</th>
+<th>Układ</th>
+<th>przykład 1</th>
+<th>przykład 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>produkty przy pobraniu</td>
+<td><code>products_at_pick[k].orientation</code></td>
+<td>transportera</td>
+<td>270</td>
+<td>90</td>
+</tr>
+<tr>
+<td>chwytak pobiera</td>
+<td><code>gripper_pick_orientation</code></td>
+<td>transportera</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>chwytak odkłada</td>
+<td><code>gripper_place_orientation</code></td>
+<td>palety</td>
+<td>90</td>
+<td>90</td>
+</tr>
+<tr>
+<td>produkty na palecie</td>
+<td><code>products[].orientation</code></td>
+<td>palety</td>
+<td>0</td>
+<td>180</td>
+</tr>
+</tbody>
+</table>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k2-przyklad.svg" alt="Na rysunku przykład 1: Produkt A, warstwa unikalna 1, ruch 1. Przykład 2 to ruch 4 z warstwy unikalnej 2."><figcaption>Na rysunku przykład 1: Produkt A, warstwa unikalna 1, ruch 1. Przykład 2 to ruch 4 z warstwy unikalnej 2.</figcaption></figure></div>
+
+<div class="dwie">
+<div>
+<ul>
+<li>Produkt obraca się razem z chwytakiem. Plik podaje wszystkie cztery orientacje ruchu: nic nie trzeba liczyć.</li>
+<li>Sterownik (PLC) dostaje orientacje przy pobraniu i obie orientacje chwytaka. Orientacji na palecie nie potrzebuje:
+  produkty leżą tak, jak odłożył je chwytak.</li>
+<li>Ściany z etykietą (<code>label_sides</code> typu produktu) są podane w pozycji normalnej, Produkt A: <code>[270]</code>.</li>
+</ul>
+</div>
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k2-etykieta.svg" alt="Etykieta Produktu A (ściana 270) obraca się razem z produktem."><figcaption>Etykieta Produktu A (ściana 270) obraca się razem z produktem.</figcaption></figure>
+</div>
+</div>
+</div>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 2 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-3">
+<div class="glowa"><div><header><span class="nr">3</span><h1>Chwytak</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Chwytak w orientacji 0 stoi długością wzdłuż X, przodem (trójkąt) do góry rysunku. Przy pobraniu jego orientacja liczy się w układzie transportera, przy odłożeniu w układzie palety.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<p>Orientację 0 chwytaka zalecamy przyjąć tak, jak chwytak najczęściej pobiera produkty z transportera. Plik podaje obrys
+otwartego chwytaka, niezależnie od jego rodzaju: przy chwytaku szczękowym to obrys przy maksymalnie otwartych
+szczękach. Obrys jest zwykle większy od pobieranych produktów. Strona otwarcia (90 albo 270, karta 4) musi być
+wolna przy odkładaniu: przy chwytaku szczękowym to strona ruchomej szczęki, przy grabiowym strona, od której
+wsuwają się grabie.</p>
+<div class="rzad"><figure class="pol"><img src="rysunki/k3-chwytak.svg" alt="Chwytak w orientacji 0. Obrys otwartego chwytaka w mm: długość wzdłuż, szerokość w poprzek."><figcaption>Chwytak w orientacji 0. Obrys otwartego chwytaka w mm: długość wzdłuż, szerokość w poprzek.</figcaption></figure><figure class="pol"><img src="rysunki/k3-pobranie.svg" alt="Transporter: kierunek jazdy w dół rysunku, koniec na dole. [0]: produkt przy końcu transportera."><figcaption>Transporter: kierunek jazdy w dół rysunku, koniec na dole. [0]: produkt przy końcu transportera.</figcaption></figure></div>
+
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k3-orientacje.svg" alt="Przy odłożeniu chwytak może stać w każdej z czterech orientacji w układzie palety."><figcaption>Przy odłożeniu chwytak może stać w każdej z czterech orientacji w układzie palety.</figcaption></figure></div>
+
+<ul>
+<li>Orientacja chwytaka przy pobraniu (<code>gripper_pick_orientation</code>): 0 albo 180, w układzie transportera.</li>
+<li>Orientacja chwytaka przy odłożeniu (<code>gripper_place_orientation</code>): 0, 90, 180 albo 270, w układzie palety.</li>
+<li>Produkty przy pobraniu (<code>products_at_pick</code>): produkty w kolejności dojazdu do końca transportera, każdy z numerem
+  produktu (<code>product_id</code>) i orientacją przy pobraniu (<code>orientation</code>). <code>[0]</code> to produkt przy końcu transportera,
+  dalej kolejne od końca.</li>
+<li>W orientacji 0 przy końcu transportera leży tył chwytaka, w orientacji 180 jego przód.</li>
+<li>Dozwolone orientacje chwytaka przy pobraniu (<code>gripper.allowed_pick_orientation</code>) i przy odłożeniu
+  (<code>gripper.allowed_place_orientation</code>) to ustawienia stanowiska.</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 3 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-4">
+<div class="glowa"><div><header><span class="nr">4</span><h1>Strona otwarcia i wyrównanie</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Strona otwarcia (90 albo 270) to strona chwytaka, która zostaje wolna: przeciwną stroną chwytak dostawia produkty do już odłożonych. Wyrównanie (0, 180, 900) mówi, przy którym końcu chwytaka leżą produkty. Oba należą do chwytaka i liczą się w jego układzie.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k4-strona-otwarcia.svg" alt="Chwytak w orientacji 0. Strzałka: strona otwarcia."><figcaption>Chwytak w orientacji 0. Strzałka: strona otwarcia.</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li>Strona otwarcia (<code>gripper_open_side</code>): 90 albo 270. Przy stronie otwarcia 270 produkty leżą przy stronie 90 i tą
+  stroną chwytak dostawia je do już odłożonych. Strona 270 zostaje wolna, chyba że ustawienia stanowiska
+  mówią inaczej.</li>
+<li>Chwytak szczękowy: strona ruchomej szczęki. Grabiowy: strona, z której najeżdżają grabie. Inny: strona z
+  elementami, które mogą wejść w kolizję z sąsiednimi produktami.</li>
+<li>Gdy ruchome są obie strony, stanowisko dopuszcza obie (<code>gripper.allowed_open_side</code>).</li>
+<li><strong>900</strong>: chwytak bez strony otwarcia (od góry). <strong>999</strong>: nieprzypisane.</li>
+<li>Wyrównanie (<code>gripper_align</code>): <strong>0</strong> = produkty przy przodzie chwytaka, <strong>180</strong> = przy tyle, <strong>900</strong> = na środku.</li>
+<li>900 nie jest kierunkiem: w wyrównaniu znaczy chwytak na środku względem produktów.</li>
+</ul>
+</div>
+</div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k4-wyrownanie.svg" alt="Wyrównanie przy pobraniu. Przód chwytaka to trójkąt, tył to koniec naprzeciw."><figcaption>Wyrównanie przy pobraniu. Przód chwytaka to trójkąt, tył to koniec naprzeciw.</figcaption></figure></div>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JSON</th>
+<th>PLC (<code>tPlacingData</code>, dane ruchu)</th>
+<th>kolumna CSV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>strona otwarcia</td>
+<td><code>gripper_open_side</code>: 90, 270, 900</td>
+<td><code>i16GripperOpenSide</code>: 90, 270, 900</td>
+<td><code>GripperOpenSide</code></td>
+</tr>
+<tr>
+<td>wyrównanie</td>
+<td><code>gripper_align</code>: 0, 180, 900</td>
+<td><code>i16GripperAlign</code>: 0, 180, 900</td>
+<td><code>GripperAlign</code></td>
+</tr>
+</tbody>
+</table>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 4 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-5">
+<div class="glowa"><div><header><span class="nr">5</span><h1>Kierunek odłożenia</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Kierunek odłożenia to kierunek, w którym chwytak z produktami jedzie w ostatniej fazie dojazdu do pozycji odłożenia, liczony w układzie palety. 900 oznacza odłożenie prosto z góry.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<div class="rzad"><figure class="pol"><img src="rysunki/k5-najazd.svg" alt="Produkt A, warstwa unikalna 1, ruch 4: kierunek odłożenia 45, produkty dojeżdżają do ruchów 2 i 3."><figcaption>Produkt A, warstwa unikalna 1, ruch 4: kierunek odłożenia 45, produkty dojeżdżają do ruchów 2 i 3.</figcaption></figure><figure class="pol"><img src="rysunki/k5-niezaleznie.svg" alt="Kierunek odłożenia 90: chwytak dostawia produkty w lewo, do już odłożonych. Liczy się w układzie palety, więc jest ten sam przy każdej orientacji chwytaka."><figcaption>Kierunek odłożenia 90: chwytak dostawia produkty w lewo, do już odłożonych. Liczy się w układzie palety, więc jest ten sam przy każdej orientacji chwytaka.</figcaption></figure></div>
+
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k5-brak.svg" alt="Widok z boku."><figcaption>Widok z boku.</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li><strong>900</strong>: prosto z góry, bez dojazdu z boku. <strong>999</strong>: nieprzypisane.</li>
+<li>Wysokość i długość dojazdu ustawia program robota: plik podaje tylko kierunek.</li>
+</ul>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JSON</th>
+<th>PLC (<code>tPlacingData</code>, dane ruchu)</th>
+<th>kolumna CSV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kierunek odłożenia</td>
+<td><code>placing_direction</code>: 0, 45, 90, … 315</td>
+<td><code>i16PlacingDirection</code>: 0, 45, … 315</td>
+<td><code>PlacingDirection</code></td>
+</tr>
+<tr>
+<td>prosto z góry</td>
+<td>900</td>
+<td>900</td>
+<td>900</td>
+</tr>
+</tbody>
+</table>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 5 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-6">
+<div class="glowa"><div><header><span class="nr">6</span><h1>Stos i przekładki</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Stos (<code>stack</code>) układa warstwy od palety w górę, każdą z przekładką albo bez. Z liczy się od desek palety, więc wysokość pustej palety (<code>pallet.height</code>) robot dodaje sam.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k6-stos.svg" alt="Przykład: dwa typy przekładek, trzy warstwy, wysokość produktu 200 mm. Z w mm od desek palety."><figcaption>Przykład: dwa typy przekładek, trzy warstwy, wysokość produktu 200 mm. Z w mm od desek palety.</figcaption></figure></div>
+
+<p class="wzor">Z(K) = (K − 1) × wysokość produktu + grubości przekładek pod warstwą K<br>
+summary.height = pallet.height + warstwy + wszystkie przekładki</p>
+
+<p>Inna wysokość palety zmienia tylko <code>pallet.height</code> i <code>summary.height</code>. Z warstw zostaje, bo liczy się od desek.</p>
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k6-kolejnosc.svg" alt="Produkt A, warstwa unikalna 1: ruchy i obwiednia ruchu 1 (prostokąt wokół jego produktów)."><figcaption>Produkt A, warstwa unikalna 1: ruchy i obwiednia ruchu 1 (prostokąt wokół jego produktów).</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li>Przekładka (slip sheet): arkusz na palecie, między warstwami albo na wierzchu.</li>
+<li>Pozycja stosu wskazuje warstwę unikalną (<code>layout</code> = <code>id</code> z <code>layouts</code>) i przekładkę leżącą na niej (<code>slip_sheet</code> =
+  <code>id</code> z <code>slip_sheet_types</code>). Brak <code>slip_sheet</code>: bez przekładki.</li>
+<li>Typ przekładki (<code>slip_sheet_types</code>, do 10 typów) ma tylko grubość (<code>thickness</code>): o ile przekładka podnosi następną
+  warstwę. Wymiary i materiał ustala integrator.</li>
+<li>Warstwa unikalna (<code>layouts[]</code>): układ warstwy zapisany raz. Stos używa go w wielu warstwach palety.</li>
+<li>Produkt w ruchu (<code>products[]</code>): <code>x</code>, <code>y</code> = róg o mniejszym X i Y, <code>size_x</code>, <code>size_y</code> = wymiar wzdłuż X i Y.</li>
+<li>Środek ruchu dla PLC (<code>tPlacingData</code>) to liczby całkowite: trunc ucina część po przecinku.</li>
+</ul>
+</div>
+</div>
+<p class="wzor"><code>i16MiddleX</code> = trunc((<code>x_min</code> + <code>x_max</code>) / 2) &nbsp;&nbsp; <code>i16MiddleY</code> = trunc((<code>y_min</code> + <code>y_max</code>) / 2)</p>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 6 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+<article class="karta" id="karta-7">
+<div class="glowa"><div><header><span class="nr">7</span><h1>Plik OpenPallet 1.2</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Plik OpenPallet to JSON. Klucze najwyższego poziomu mają stałą kolejność, a to, co do siebie należy, leży w nich zagnieżdżone: ruchy w warstwie unikalnej, produkty w ruchu.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k7-plik.svg" alt="Struktura pliku w kolejności zapisu. { }: obiekt, [ ]: lista, szary wiersz: pola każdego elementu listy."><figcaption>Struktura pliku w kolejności zapisu. { }: obiekt, [ ]: lista, szary wiersz: pola każdego elementu listy.</figcaption></figure></div>
+
+<ul>
+<li><strong>Rozpoznanie:</strong> <code>format.name</code> = <code>"OpenPallet"</code> i <code>format.version</code> 1.2 albo późniejsze 1.x: czytaj. Inna nazwa
+  albo wersja: odrzuć. Nieznane klucze pomijaj.</li>
+<li>Kolejne wersje 1.x dodają tylko pola nieobowiązkowe: program, który czyta 1.2, przeczyta każdy późniejszy plik 1.x.</li>
+<li>Jednostki: położenia i wymiary w mm, masa w g, orientacje i kierunki w stopniach (liczby całkowite). Grubość
+  przekładki i <code>summary.height</code> w mm z jednym miejscem po przecinku.</li>
+<li>Paleta bez miksu (<code>summary.mix</code> false): jeden typ produktu, <code>id</code> 1, a produkty w ruchach nie mają pola <code>type</code>.</li>
+<li>Suma kontrolna (<code>header.checksum</code>): CRC-32 (8 znaków hex) z JSON-u bez niej, klucze posortowane, bez spacji,
+  znaki spoza ASCII jako <code>\uXXXX</code>, liczby całkowite bez <code>.0</code>.</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 7 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

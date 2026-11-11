@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 230" width="680" height="230" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<title>Example: products at the pick 270, the gripper picks at orientation 0, places at orientation 90, products on the pallet 0</title>
+<text x="92" y="18" font-size="12.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">pick</text>
+<text x="92" y="33" font-size="10.5" fill="#555555" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">conveyor frame</text>
+<rect x="52" y="44" width="72" height="162" fill="#7d9be0" rx="10" stroke="#3d5fae" stroke-width="1.2" fill-opacity="0.55"/>
+<line x1="58" y1="206" x2="118" y2="206" stroke="#e53935" stroke-width="5" stroke-linecap="butt"/>
+<line x1="40" y1="50" x2="40" y2="163.86" stroke="#7b2fa0" stroke-width="2.2" stroke-linecap="butt"/>
+<polygon points="40,170.36 36.4,162.36 43.6,162.36" fill="#7b2fa0"/>
+<text x="36" y="108.8" font-size="10.5" fill="#7b2fa0" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" transform="rotate(-90 36 108.8)">direction of travel</text>
+<g transform="translate(88 183.5) rotate(-270)" data-rotation="270">
+<rect x="-22.5" y="-26.1" width="45" height="52.2" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-19.35" y="-24.21" width="38.7" height="3.47" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(88 138.5) rotate(-270)" data-rotation="270">
+<rect x="-22.5" y="-26.1" width="45" height="52.2" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-19.35" y="-24.21" width="38.7" height="3.47" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(93.4 170) rotate(0)" data-rotation="0">
+<rect x="-31.5" y="-54" width="63" height="108" fill="#ffd21f" stroke="#d08c00" stroke-width="1.8" fill-opacity="0.2"/>
+<rect x="-33.7" y="-54" width="4.41" height="108" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="90"/>
+<rect x="36.3" y="-54" width="4.41" height="108" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="270"/>
+<line x1="31.5" y1="-19.44" x2="38.5" y2="-19.44" stroke="#7a4a00" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2"/>
+<line x1="31.5" y1="19.44" x2="38.5" y2="19.44" stroke="#7a4a00" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2"/>
+<line x1="41.7" y1="0" x2="48.6" y2="0" stroke="#7a4a00" stroke-width="1.5" stroke-linecap="butt"/>
+<polygon points="53.7,0 47.1,2.97 47.1,-2.97" fill="#7a4a00"/>
+<polygon points="-10,-55.5 10,-55.5 0,-67" fill="#7a4a00" data-front="0"/>
+<circle cx="0" cy="0" r="7.56" fill="#ffffff" stroke="#7a4a00" stroke-width="1.5"/>
+<circle cx="0" cy="0" r="3.02" fill="#7a4a00"/>
+</g>
+<line x1="144" y1="80.2" x2="101.4" y2="115.4" stroke="#7b2fa0" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="101.4" cy="115.4" r="2.4" fill="#7b2fa0"/>
+<rect x="144" y="44" width="99.47" height="36.2" fill="#ffffff" rx="7" stroke="#7b2fa0" stroke-width="1.2"/>
+<text x="150" y="59.35" font-size="11" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif"><tspan x="150" dy="0">gripper picks</tspan><tspan x="150" dy="13.2">at orientation 0</tspan></text>
+<line x1="144" y1="176.2" x2="110.5" y2="183.5" stroke="#7b2fa0" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="110.5" cy="183.5" r="2.4" fill="#7b2fa0"/>
+<rect x="144" y="140" width="127.5" height="36.2" fill="#ffffff" rx="7" stroke="#7b2fa0" stroke-width="1.2"/>
+<text x="150" y="155.35" font-size="11" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif"><tspan x="150" dy="0">products at the pick:</tspan><tspan x="150" dy="13.2">orientation 270</tspan></text>
+<text x="322" y="90" font-size="10.5" fill="#555555" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">robot</text>
+<text x="322" y="104" font-size="10.5" fill="#555555" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">changes gripper</text>
+<text x="322" y="118" font-size="10.5" fill="#555555" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">orientation</text>
+<text x="530" y="18" font-size="12.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">place</text>
+<text x="530" y="33" font-size="10.5" fill="#555555" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">pallet frame</text>
+<rect x="394" y="48" width="234" height="124.8" fill="#f1e4c6" stroke="#a8874f" stroke-width="1.2"/>
+<rect x="394" y="48" width="33.43" height="124.8" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="460.86" y="48" width="33.43" height="124.8" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="527.71" y="48" width="33.43" height="124.8" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="594.57" y="48" width="33.43" height="124.8" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="394" y="48" width="234" height="124.8" fill="none" stroke="#a8874f" stroke-width="1.2"/>
+<g transform="translate(426.5 103.9) rotate(0)" data-rotation="0">
+<rect x="-32.5" y="-37.7" width="65" height="75.4" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-27.95" y="-34.97" width="55.9" height="5.01" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(491.5 103.9) rotate(0)" data-rotation="0">
+<rect x="-32.5" y="-37.7" width="65" height="75.4" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-27.95" y="-34.97" width="55.9" height="5.01" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(472 96.1) rotate(-90)" data-rotation="90">
+<rect x="-45.5" y="-78" width="91" height="156" fill="#ffd21f" stroke="#d08c00" stroke-width="1.8" fill-opacity="0.2"/>
+<rect x="-48" y="-78" width="5" height="156" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="90"/>
+<rect x="50" y="-78" width="5" height="156" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="270"/>
+<line x1="45.5" y1="-28.08" x2="52.5" y2="-28.08" stroke="#7a4a00" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2"/>
+<line x1="45.5" y1="28.08" x2="52.5" y2="28.08" stroke="#7a4a00" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2"/>
+<line x1="56" y1="0" x2="62.9" y2="0" stroke="#7a4a00" stroke-width="1.5" stroke-linecap="butt"/>
+<polygon points="68,0 61.4,2.97 61.4,-2.97" fill="#7a4a00"/>
+<polygon points="-10,-79.5 10,-79.5 0,-91" fill="#7a4a00" data-front="0"/>
+<circle cx="0" cy="0" r="8" fill="#ffffff" stroke="#7a4a00" stroke-width="1.5"/>
+<circle cx="0" cy="0" r="3.2" fill="#7a4a00"/>
+</g>
+<line x1="387" y1="41" x2="387" y2="178.3" stroke="#c62828" stroke-width="1.8" stroke-linecap="butt" data-direction="180"/>
+<polygon points="387,183.8 383.85,176.8 390.15,176.8" fill="#c62828"/>
+<line x1="387" y1="41" x2="629.5" y2="41" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="butt" data-direction="270"/>
+<polygon points="635,41 628,44.15 628,37.85" fill="#2e7d32"/>
+<circle cx="387" cy="41" r="4.6" fill="#ffffff" stroke="#1f5fd6" stroke-width="1.4"/>
+<circle cx="387" cy="41" r="1.6" fill="#1f5fd6"/>
+<text x="382" y="185.8" font-size="11" fill="#c62828" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="end" font-weight="bold">X</text>
+<text x="637" y="36" font-size="11" fill="#2e7d32" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-weight="bold">Y</text>
+<line x1="433" y1="182" x2="433" y2="126" stroke="#7b2fa0" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="433" cy="126" r="2.4" fill="#7b2fa0"/>
+<rect x="398" y="182" width="105.63" height="36.2" fill="#ffffff" rx="7" stroke="#7b2fa0" stroke-width="1.2"/>
+<text x="404" y="197.35" font-size="11" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif"><tspan x="404" dy="0">gripper places</tspan><tspan x="404" dy="13.2">at orientation 90</tspan></text>
+<line x1="530" y1="182" x2="503.2" y2="113" stroke="#7b2fa0" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="503.2" cy="113" r="2.4" fill="#7b2fa0"/>
+<rect x="530" y="182" width="137.05" height="36.2" fill="#ffffff" rx="7" stroke="#7b2fa0" stroke-width="1.2"/>
+<text x="536" y="197.35" font-size="11" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif"><tspan x="536" dy="0">products on the pallet:</tspan><tspan x="536" dy="13.2">orientation 0</tspan></text>
+</svg>

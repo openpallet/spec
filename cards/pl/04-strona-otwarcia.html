@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · karta 4: Strona otwarcia i wyrównanie</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">spis</a> · <a href="03-chwytak.html">← poprzednia</a></span><span><a href="05-kierunek-odlozenia.html">następna →</a></span></nav>
+<article class="karta" id="karta-4">
+<div class="glowa"><div><header><span class="nr">4</span><h1>Strona otwarcia i wyrównanie</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Strona otwarcia (90 albo 270) to strona chwytaka, która zostaje wolna: przeciwną stroną chwytak dostawia produkty do już odłożonych. Wyrównanie (0, 180, 900) mówi, przy którym końcu chwytaka leżą produkty. Oba należą do chwytaka i liczą się w jego układzie.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k4-strona-otwarcia.svg" alt="Chwytak w orientacji 0. Strzałka: strona otwarcia."><figcaption>Chwytak w orientacji 0. Strzałka: strona otwarcia.</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li>Strona otwarcia (<code>gripper_open_side</code>): 90 albo 270. Przy stronie otwarcia 270 produkty leżą przy stronie 90 i tą
+  stroną chwytak dostawia je do już odłożonych. Strona 270 zostaje wolna, chyba że ustawienia stanowiska
+  mówią inaczej.</li>
+<li>Chwytak szczękowy: strona ruchomej szczęki. Grabiowy: strona, z której najeżdżają grabie. Inny: strona z
+  elementami, które mogą wejść w kolizję z sąsiednimi produktami.</li>
+<li>Gdy ruchome są obie strony, stanowisko dopuszcza obie (<code>gripper.allowed_open_side</code>).</li>
+<li><strong>900</strong>: chwytak bez strony otwarcia (od góry). <strong>999</strong>: nieprzypisane.</li>
+<li>Wyrównanie (<code>gripper_align</code>): <strong>0</strong> = produkty przy przodzie chwytaka, <strong>180</strong> = przy tyle, <strong>900</strong> = na środku.</li>
+<li>900 nie jest kierunkiem: w wyrównaniu znaczy chwytak na środku względem produktów.</li>
+</ul>
+</div>
+</div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k4-wyrownanie.svg" alt="Wyrównanie przy pobraniu. Przód chwytaka to trójkąt, tył to koniec naprzeciw."><figcaption>Wyrównanie przy pobraniu. Przód chwytaka to trójkąt, tył to koniec naprzeciw.</figcaption></figure></div>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JSON</th>
+<th>PLC (<code>tPlacingData</code>, dane ruchu)</th>
+<th>kolumna CSV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>strona otwarcia</td>
+<td><code>gripper_open_side</code>: 90, 270, 900</td>
+<td><code>i16GripperOpenSide</code>: 90, 270, 900</td>
+<td><code>GripperOpenSide</code></td>
+</tr>
+<tr>
+<td>wyrównanie</td>
+<td><code>gripper_align</code>: 0, 180, 900</td>
+<td><code>i16GripperAlign</code>: 0, 180, 900</td>
+<td><code>GripperAlign</code></td>
+</tr>
+</tbody>
+</table>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 4 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

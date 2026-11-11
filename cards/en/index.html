@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet: the standard&#x27;s cards</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span></span><span><a href="wszystkie.html">all cards on one page</a> · <a href="OpenPallet-cards-en.pdf">PDF of all cards</a> · <a href="01-station-layout.html">next →</a></span></nav>
+<article class="karta tytulowa" id="karta-0">
+<header><h1>OpenPallet: the standard&#x27;s cards</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="lead">OpenPallet is an open exchange format for palletizing data: one JSON file describes the pallet, the
+product, the slip sheets, the layers and every robot move.</p>
+
+<p class="lead">An OpenPallet 1.2 file carries the mark <code>"format": {"name": "OpenPallet", "version": "1.2"}</code>,
+every position in one pallet frame, and every orientation and every direction in degrees counter-clockwise from the
+top of the drawing.</p>
+
+<p class="lead">The same values have a fixed layout for the controller and the robot (PLC structure, CSV), so the PLC
+and robot program reads what the drawing shows.</p>
+
+<table class="spis"><tbody><tr><td>1</td><td><a href="01-station-layout.html">Station layout and directions</a></td></tr><tr><td>2</td><td><a href="02-orientation.html">Orientation</a></td></tr><tr><td>3</td><td><a href="03-gripper.html">Gripper</a></td></tr><tr><td>4</td><td><a href="04-open-side.html">Open side and alignment</a></td></tr><tr><td>5</td><td><a href="05-placing-direction.html">Placing direction</a></td></tr><tr><td>6</td><td><a href="06-stack-and-slip-sheets.html">Stack and slip sheets</a></td></tr><tr><td>7</td><td><a href="07-openpallet-file.html">OpenPallet 1.2 file</a></td></tr></tbody></table>
+
+<p>Example on the cards: a pallet of Product A (EUR2 1200 × 1000, product 290 × 250 × 200, 6 layers, 48 moves).</p>
+<div class="licencja">
+<p><strong>OpenPallet, created and maintained by the makers of PalletDesigner.</strong></p>
+<p>Text and drawings of the cards: licence <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a>. Every copy,
+translation or quotation names the author with the sentence above.</p>
+<p>OpenPallet 1.2 · 2026-11-10 · <a href="https://openpallet.org">openpallet.org</a></p>
+</div>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

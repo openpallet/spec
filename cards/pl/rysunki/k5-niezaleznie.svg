@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 230" width="340" height="230" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<title>Kierunek odłożenia nie zależy od orientacji chwytaka</title>
+<text x="90" y="18" font-size="11.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">chwytak w orientacji 0</text>
+<g transform="translate(38.2 71.5) rotate(-270)" data-rotation="270">
+<rect x="-17.5" y="-20.3" width="35" height="40.6" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(38.2 106.5) rotate(-270)" data-rotation="270">
+<rect x="-17.5" y="-20.3" width="35" height="40.6" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(99.8 71.5) rotate(-270)" data-rotation="270">
+<rect x="-17.5" y="-20.3" width="35" height="40.6" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-15" y="-18.8" width="30" height="2.75" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(99.8 106.5) rotate(-270)" data-rotation="270">
+<rect x="-17.5" y="-20.3" width="35" height="40.6" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-15" y="-18.8" width="30" height="2.75" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(104 96) rotate(0)" data-rotation="0">
+<rect x="-24.5" y="-42" width="49" height="84" fill="#ffd21f" stroke="#d08c00" stroke-width="1.8" fill-opacity="0.2"/>
+<rect x="-26.22" y="-42" width="3.43" height="84" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="90"/>
+<rect x="22.79" y="-42" width="3.43" height="84" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="270"/>
+<polygon points="-9.8,-43.5 9.8,-43.5 0,-54.77" fill="#7a4a00" data-front="0"/>
+<circle cx="0" cy="0" r="5.88" fill="#ffffff" stroke="#7a4a00" stroke-width="1.5"/>
+<circle cx="0" cy="0" r="2.35" fill="#7a4a00"/>
+</g>
+<line x1="118" y1="168" x2="71.5" y2="168" stroke="#7b2fa0" stroke-width="3" stroke-linecap="butt" data-direction="90"/>
+<polygon points="62,168 73,163.05 73,172.95" fill="#7b2fa0"/>
+<text x="90" y="192" font-size="10.5" fill="#7b2fa0" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">kierunek odłożenia</text>
+<text x="248" y="18" font-size="11.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">chwytak w orientacji 90</text>
+<g transform="translate(181.5 100.2) rotate(0)" data-rotation="0">
+<rect x="-17.5" y="-20.3" width="35" height="40.6" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(237.5 100.2) rotate(0)" data-rotation="0">
+<rect x="-17.5" y="-20.3" width="35" height="40.6" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-15" y="-18.8" width="30" height="2.75" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(272.5 100.2) rotate(0)" data-rotation="0">
+<rect x="-17.5" y="-20.3" width="35" height="40.6" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-15" y="-18.8" width="30" height="2.75" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(262 96) rotate(-90)" data-rotation="90">
+<rect x="-24.5" y="-42" width="49" height="84" fill="#ffd21f" stroke="#d08c00" stroke-width="1.8" fill-opacity="0.2"/>
+<rect x="-26.22" y="-42" width="3.43" height="84" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="90"/>
+<rect x="22.79" y="-42" width="3.43" height="84" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="270"/>
+<polygon points="-9.8,-43.5 9.8,-43.5 0,-54.77" fill="#7a4a00" data-front="0"/>
+<circle cx="0" cy="0" r="5.88" fill="#ffffff" stroke="#7a4a00" stroke-width="1.5"/>
+<circle cx="0" cy="0" r="2.35" fill="#7a4a00"/>
+</g>
+<line x1="276" y1="168" x2="229.5" y2="168" stroke="#7b2fa0" stroke-width="3" stroke-linecap="butt" data-direction="90"/>
+<polygon points="220,168 231,163.05 231,172.95" fill="#7b2fa0"/>
+<text x="248" y="192" font-size="10.5" fill="#7b2fa0" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">kierunek odłożenia</text>
+<text x="170" y="220" font-size="10.5" fill="#555555" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-style="italic">ten sam przy obu orientacjach chwytaka</text>
+</svg>

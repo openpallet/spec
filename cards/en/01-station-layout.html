@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · card 1: Station layout and directions</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">contents</a></span><span><a href="02-orientation.html">next →</a></span></nav>
+<article class="karta" id="karta-1">
+<header><span class="nr">1</span><h1>Station layout and directions</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Every element of the station has its own frame and normal pose. The file gives orientations and positions relative to the normal pose: of the conveyor at the pick, of the pallet at the place, however they stand in the station. Pallet frame: X down the drawing along the length (<code>pallet.length</code>), Y to the right along the width (<code>pallet.width</code>), Z up.</p>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k1-stanowisko.svg" alt="Example: Product A, unique layer 1, move 1."><figcaption>Example: Product A, unique layer 1, move 1.</figcaption></figure></div>
+
+<div class="dwie lewa">
+<div class="legenda">
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="robot" src="rysunki/s-robot.svg"></td>
+<td><strong>Robot.</strong> The integrator sets its frame (Xr, Yr). The robot program places the pallet and the conveyor in it.</td>
+</tr>
+<tr>
+<td><img alt="pallet" src="rysunki/s-paleta.svg"></td>
+<td><strong>Pallet.</strong> Origin O in a corner, X along the length (also when the pallet is wider than long), Y along the width, Z up from the deck boards.</td>
+</tr>
+<tr>
+<td><img alt="conveyor" src="rysunki/s-transporter.svg"></td>
+<td><strong>Conveyor.</strong> Travel down the drawing, the conveyor end (red line) at the bottom.</td>
+</tr>
+<tr>
+<td><img alt="gripper" src="rysunki/s-chwytak.svg"></td>
+<td><strong>Gripper</strong> at orientation 0. Triangle: the front. Dark bars: sides 90 and 270. Circle: the robot's flange.</td>
+</tr>
+<tr>
+<td><img alt="product" src="rysunki/s-produkt.svg"></td>
+<td><strong>Product</strong> at orientation 0. Dark bar: face 0 (the front). Blue bar: the label.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<div class="rzad jeden">
+<figure class="pol" style="width:62%;margin:0 auto"><img src="rysunki/k1-kierunki.svg" alt="Compass: directions every 45 degrees, numbers increase counter-clockwise."><figcaption>Compass: directions every 45 degrees, numbers increase counter-clockwise.</figcaption></figure>
+</div>
+<div class="mala">
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>On the drawing</th>
+<th>Vector (X, Y)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>up</td>
+<td>(−1, 0)</td>
+</tr>
+<tr>
+<td>45</td>
+<td>up-left</td>
+<td>(−1, −1)</td>
+</tr>
+<tr>
+<td>90</td>
+<td>left</td>
+<td>(0, −1)</td>
+</tr>
+<tr>
+<td>135</td>
+<td>down-left</td>
+<td>(+1, −1)</td>
+</tr>
+<tr>
+<td>180</td>
+<td>down</td>
+<td>(+1, 0)</td>
+</tr>
+<tr>
+<td>225</td>
+<td>down-right</td>
+<td>(+1, +1)</td>
+</tr>
+<tr>
+<td>270</td>
+<td>right</td>
+<td>(0, +1)</td>
+</tr>
+<tr>
+<td>315</td>
+<td>up-right</td>
+<td>(−1, +1)</td>
+</tr>
+<tr>
+<td>900</td>
+<td>straight down</td>
+<td>(0, 0)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Orientation</strong> (0, 90, 180, 270): the side the front of an element faces. 0 is the normal pose: the product
+  stands as it reaches the conveyor end without being turned, the gripper as it picks most often.</li>
+<li>The file gives only orientations. How to turn the gripper to reach them safely is the robot program's decision.</li>
+<li><strong>Direction</strong> (compass): the placing direction of the products, in the pallet frame. <strong>900</strong> = neutral:
+  straight down (card 5), no open side and centre (card 4). <strong>999</strong> = not assigned.</li>
+<li><strong>Move</strong> (<code>moves[]</code>): the products the gripper picks and places at once. Z counts from the pallet's deck boards
+  (card 6).</li>
+</ul>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>card 1 of 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

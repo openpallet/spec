@@ -1,0 +1,82 @@
+{
+  "version": "1.2",
+  "edition": "7a5630949508",
+  "language": "pl",
+  "attribution": "OpenPallet, created and maintained by the makers of PalletDesigner",
+  "licence": "CC-BY-4.0",
+  "pdf": "OpenPallet-karty-pl.pdf",
+  "cards": [
+    {
+      "number": 1,
+      "title": "Układ stanowiska i kierunki",
+      "rule": "Każdy element stanowiska ma własny układ i pozycję normalną. Plik podaje orientacje i położenia względem pozycji normalnej: transportera przy pobraniu, palety przy odłożeniu, jakkolwiek stoją na stanowisku. Układ palety: X w dół rysunku wzdłuż długości (pallet.length), Y w prawo wzdłuż szerokości (pallet.width), Z w górę.",
+      "page": "01-uklad-stanowiska.html",
+      "drawings": [
+        "rysunki/k1-stanowisko.svg",
+        "rysunki/k1-kierunki.svg"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Orientacja",
+      "rule": "Orientacja to strona, w którą patrzy przód elementu (ściana 0 produktu, przód chwytaka) w układzie, w którym leży: 0, 90, 180 albo 270, jak na kompasie. Orientacja 0 to pozycja normalna.",
+      "page": "02-orientacja.html",
+      "drawings": [
+        "rysunki/k2-orientacje.svg",
+        "rysunki/k2-przyklad.svg",
+        "rysunki/k2-etykieta.svg"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Chwytak",
+      "rule": "Chwytak w orientacji 0 stoi długością wzdłuż X, przodem (trójkąt) do góry rysunku. Przy pobraniu jego orientacja liczy się w układzie transportera, przy odłożeniu w układzie palety.",
+      "page": "03-chwytak.html",
+      "drawings": [
+        "rysunki/k3-chwytak.svg",
+        "rysunki/k3-pobranie.svg",
+        "rysunki/k3-orientacje.svg"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Strona otwarcia i wyrównanie",
+      "rule": "Strona otwarcia (90 albo 270) to strona chwytaka, która zostaje wolna: przeciwną stroną chwytak dostawia produkty do już odłożonych. Wyrównanie (0, 180, 900) mówi, przy którym końcu chwytaka leżą produkty. Oba należą do chwytaka i liczą się w jego układzie.",
+      "page": "04-strona-otwarcia.html",
+      "drawings": [
+        "rysunki/k4-strona-otwarcia.svg",
+        "rysunki/k4-wyrownanie.svg"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Kierunek odłożenia",
+      "rule": "Kierunek odłożenia to kierunek, w którym chwytak z produktami jedzie w ostatniej fazie dojazdu do pozycji odłożenia, liczony w układzie palety. 900 oznacza odłożenie prosto z góry.",
+      "page": "05-kierunek-odlozenia.html",
+      "drawings": [
+        "rysunki/k5-najazd.svg",
+        "rysunki/k5-niezaleznie.svg",
+        "rysunki/k5-brak.svg"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Stos i przekładki",
+      "rule": "Stos (stack) układa warstwy od palety w górę, każdą z przekładką albo bez. Z liczy się od desek palety, więc wysokość pustej palety (pallet.height) robot dodaje sam.",
+      "page": "06-stos-i-przekladki.html",
+      "drawings": [
+        "rysunki/k6-stos.svg",
+        "rysunki/k6-kolejnosc.svg"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Plik OpenPallet 1.2",
+      "rule": "Plik OpenPallet to JSON. Klucze najwyższego poziomu mają stałą kolejność, a to, co do siebie należy, leży w nich zagnieżdżone: ruchy w warstwie unikalnej, produkty w ruchu.",
+      "page": "07-plik-openpallet.html",
+      "drawings": [
+        "rysunki/k7-plik.svg"
+      ]
+    }
+  ]
+}

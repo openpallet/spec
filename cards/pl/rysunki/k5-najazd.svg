@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 262" width="340" height="262" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<title>Kierunek odłożenia: ostatni dojazd produktów ruchu, w układzie palety</title>
+<rect x="14" y="12" width="200" height="240" fill="#f1e4c6" stroke="#a8874f" stroke-width="1.2"/>
+<rect x="14" y="12" width="22.22" height="240" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="58.44" y="12" width="22.22" height="240" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="102.89" y="12" width="22.22" height="240" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="147.33" y="12" width="22.22" height="240" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="191.78" y="12" width="22.22" height="240" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="14" y="12" width="200" height="240" fill="none" stroke="#a8874f" stroke-width="1.2"/>
+<g transform="translate(39 45) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="17.5" y="-11.6" width="3" height="23.2" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+<g transform="translate(89 45) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="17.5" y="-11.6" width="3" height="23.2" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+<g transform="translate(139 45) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="17.5" y="-11.6" width="3" height="23.2" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+<g transform="translate(189 45) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="17.5" y="-11.6" width="3" height="23.2" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+<g transform="translate(39 103) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="17.5" y="-11.6" width="3" height="23.2" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+<g transform="translate(89 103) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="17.5" y="-11.6" width="3" height="23.2" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+<g transform="translate(139 103) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#7cc47f" stroke="#2e7d32" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="17.5" y="-11.6" width="3" height="23.2" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+<g transform="translate(189 103) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#7cc47f" stroke="#2e7d32" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+<rect x="17.5" y="-11.6" width="3" height="23.2" fill="#1e88e5" stroke="none" stroke-width="1" data-label="270"/>
+</g>
+<g transform="translate(151 115) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#7cc47f" stroke="#2e7d32" stroke-width="1.2" stroke-dasharray="4 3" fill-opacity="0.55"/>
+</g>
+<g transform="translate(201 115) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#7cc47f" stroke="#2e7d32" stroke-width="1.2" stroke-dasharray="4 3" fill-opacity="0.55"/>
+</g>
+<circle cx="64" cy="45" r="7.5" fill="#ffffff" stroke="#555555" stroke-width="1"/>
+<text x="64" y="48.78" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">1</text>
+<circle cx="164" cy="45" r="7.5" fill="#ffffff" stroke="#555555" stroke-width="1"/>
+<text x="164" y="48.78" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">2</text>
+<circle cx="64" cy="103" r="7.5" fill="#ffffff" stroke="#555555" stroke-width="1"/>
+<text x="64" y="106.78" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">3</text>
+<circle cx="164" cy="103" r="7.5" fill="#ffffff" stroke="#555555" stroke-width="1"/>
+<text x="164" y="106.78" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">4</text>
+<line x1="262.77" y1="180.77" x2="238.37" y2="156.37" stroke="#7b2fa0" stroke-width="3.4" stroke-linecap="butt" data-direction="45"/>
+<polygon points="230.24,148.24 243.57,153.3 235.3,161.57" fill="#7b2fa0"/>
+<rect x="224" y="196" width="114.56" height="36.2" fill="#ffffff" rx="7" stroke="#7b2fa0" stroke-width="1.2"/>
+<text x="230" y="211.35" font-size="11" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif"><tspan x="230" dy="0">kierunek odłożenia</tspan><tspan x="230" dy="13.2">produktów ruchu 4</tspan></text>
+<line x1="262" y1="34" x2="262" y2="62.5" stroke="#c62828" stroke-width="1.8" stroke-linecap="butt" data-direction="180"/>
+<polygon points="262,68 258.85,61 265.15,61" fill="#c62828"/>
+<line x1="262" y1="34" x2="290.5" y2="34" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="butt" data-direction="270"/>
+<polygon points="296,34 289,37.15 289,30.85" fill="#2e7d32"/>
+<text x="258" y="70.2" font-size="11" fill="#c62828" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="end" font-weight="bold">X</text>
+<text x="298" y="30" font-size="11" fill="#2e7d32" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-weight="bold">Y</text>
+<circle cx="262" cy="34" r="4.2" fill="#ffffff" stroke="#1f5fd6" stroke-width="1.4"/>
+<circle cx="262" cy="34" r="1.4" fill="#1f5fd6"/>
+<text x="255" y="29" font-size="11" fill="#1f5fd6" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="end" font-weight="bold">Z</text>
+</svg>

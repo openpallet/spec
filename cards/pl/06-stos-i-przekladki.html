@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · karta 6: Stos i przekładki</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">spis</a> · <a href="05-kierunek-odlozenia.html">← poprzednia</a></span><span><a href="07-plik-openpallet.html">następna →</a></span></nav>
+<article class="karta" id="karta-6">
+<div class="glowa"><div><header><span class="nr">6</span><h1>Stos i przekładki</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Stos (<code>stack</code>) układa warstwy od palety w górę, każdą z przekładką albo bez. Z liczy się od desek palety, więc wysokość pustej palety (<code>pallet.height</code>) robot dodaje sam.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k6-stos.svg" alt="Przykład: dwa typy przekładek, trzy warstwy, wysokość produktu 200 mm. Z w mm od desek palety."><figcaption>Przykład: dwa typy przekładek, trzy warstwy, wysokość produktu 200 mm. Z w mm od desek palety.</figcaption></figure></div>
+
+<p class="wzor">Z(K) = (K − 1) × wysokość produktu + grubości przekładek pod warstwą K<br>
+summary.height = pallet.height + warstwy + wszystkie przekładki</p>
+
+<p>Inna wysokość palety zmienia tylko <code>pallet.height</code> i <code>summary.height</code>. Z warstw zostaje, bo liczy się od desek.</p>
+<div class="dwie">
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k6-kolejnosc.svg" alt="Produkt A, warstwa unikalna 1: ruchy i obwiednia ruchu 1 (prostokąt wokół jego produktów)."><figcaption>Produkt A, warstwa unikalna 1: ruchy i obwiednia ruchu 1 (prostokąt wokół jego produktów).</figcaption></figure>
+</div>
+</div>
+<div>
+<ul>
+<li>Przekładka (slip sheet): arkusz na palecie, między warstwami albo na wierzchu.</li>
+<li>Pozycja stosu wskazuje warstwę unikalną (<code>layout</code> = <code>id</code> z <code>layouts</code>) i przekładkę leżącą na niej (<code>slip_sheet</code> =
+  <code>id</code> z <code>slip_sheet_types</code>). Brak <code>slip_sheet</code>: bez przekładki.</li>
+<li>Typ przekładki (<code>slip_sheet_types</code>, do 10 typów) ma tylko grubość (<code>thickness</code>): o ile przekładka podnosi następną
+  warstwę. Wymiary i materiał ustala integrator.</li>
+<li>Warstwa unikalna (<code>layouts[]</code>): układ warstwy zapisany raz. Stos używa go w wielu warstwach palety.</li>
+<li>Produkt w ruchu (<code>products[]</code>): <code>x</code>, <code>y</code> = róg o mniejszym X i Y, <code>size_x</code>, <code>size_y</code> = wymiar wzdłuż X i Y.</li>
+<li>Środek ruchu dla PLC (<code>tPlacingData</code>) to liczby całkowite: trunc ucina część po przecinku.</li>
+</ul>
+</div>
+</div>
+<p class="wzor"><code>i16MiddleX</code> = trunc((<code>x_min</code> + <code>x_max</code>) / 2) &nbsp;&nbsp; <code>i16MiddleY</code> = trunc((<code>y_min</code> + <code>y_max</code>) / 2)</p>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 6 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>

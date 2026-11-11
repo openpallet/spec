@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 330" width="340" height="330" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<title>Order of the moves (placing_order) and the envelope of move 1</title>
+<rect x="70" y="36" width="200" height="240" fill="#f1e4c6" stroke="#a8874f" stroke-width="1.2"/>
+<rect x="70" y="36" width="22.22" height="240" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="114.44" y="36" width="22.22" height="240" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="158.89" y="36" width="22.22" height="240" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="203.33" y="36" width="22.22" height="240" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="247.78" y="36" width="22.22" height="240" fill="#e2cc9a" stroke="none" stroke-width="1"/>
+<rect x="70" y="36" width="200" height="240" fill="none" stroke="#a8874f" stroke-width="1.2"/>
+<g transform="translate(95 69) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(145 69) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(195 69) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(245 69) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(95 127) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(145 127) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(195 127) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(245 127) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(95 185) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(145 185) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(195 185) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(245 185) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(95 243) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(145 243) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(195 243) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<g transform="translate(245 243) rotate(0)" data-rotation="0">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+</g>
+<rect x="70" y="40" width="100" height="58" fill="none" stroke="#1f1f1f" stroke-width="2.2"/>
+<rect x="170" y="40" width="100" height="58" fill="none" stroke="#1f1f1f" stroke-width="2.2"/>
+<rect x="70" y="98" width="100" height="58" fill="none" stroke="#1f1f1f" stroke-width="2.2"/>
+<rect x="170" y="98" width="100" height="58" fill="none" stroke="#1f1f1f" stroke-width="2.2"/>
+<rect x="70" y="156" width="50" height="116" fill="none" stroke="#1f1f1f" stroke-width="2.2"/>
+<rect x="120" y="156" width="50" height="116" fill="none" stroke="#1f1f1f" stroke-width="2.2"/>
+<rect x="170" y="156" width="100" height="58" fill="none" stroke="#1f1f1f" stroke-width="2.2"/>
+<rect x="170" y="214" width="100" height="58" fill="none" stroke="#1f1f1f" stroke-width="2.2"/>
+<line x1="61" y1="40" x2="70" y2="40" stroke="#555555" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 2"/>
+<text x="58" y="40" font-size="10" fill="#555555" font-family="Consolas, 'Courier New', monospace" text-anchor="end" dominant-baseline="middle">x_min 20</text>
+<line x1="61" y1="98" x2="70" y2="98" stroke="#555555" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 2"/>
+<text x="58" y="98" font-size="10" fill="#555555" font-family="Consolas, 'Courier New', monospace" text-anchor="end" dominant-baseline="middle">x_max 310</text>
+<line x1="70" y1="24" x2="70" y2="40" stroke="#555555" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 2"/>
+<text x="70" y="20" font-size="10" fill="#555555" font-family="Consolas, 'Courier New', monospace" text-anchor="middle">y_min 0</text>
+<line x1="170" y1="24" x2="170" y2="40" stroke="#555555" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 2"/>
+<text x="170" y="20" font-size="10" fill="#555555" font-family="Consolas, 'Courier New', monospace" text-anchor="middle">y_max 500</text>
+<line x1="220" y1="286" x2="220" y2="243" stroke="#7b2fa0" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="220" cy="243" r="2.4" fill="#7b2fa0"/>
+<rect x="96" y="286" width="164" height="35.1" fill="#ffffff" rx="7" stroke="#7b2fa0" stroke-width="1.2"/>
+<text x="102" y="300.93" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif"><tspan x="102" dy="0">move number (placing_order):</tspan><tspan x="102" dy="12.6">from 1, in the placing order</tspan></text>
+<circle cx="120" cy="69" r="8.5" fill="#ffffff" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="120" y="72.8" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">1</text>
+<circle cx="220" cy="69" r="8.5" fill="#ffffff" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="220" y="72.8" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">2</text>
+<circle cx="120" cy="127" r="8.5" fill="#ffffff" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="120" y="130.8" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">3</text>
+<circle cx="220" cy="127" r="8.5" fill="#ffffff" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="220" y="130.8" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">4</text>
+<circle cx="95" cy="214" r="8.5" fill="#ffffff" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="95" y="217.8" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">5</text>
+<circle cx="145" cy="214" r="8.5" fill="#ffffff" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="145" y="217.8" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">6</text>
+<circle cx="220" cy="185" r="8.5" fill="#ffffff" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="220" y="188.8" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">7</text>
+<circle cx="220" cy="243" r="8.5" fill="#ffffff" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="220" y="246.8" font-size="10.5" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">8</text>
+<rect x="78" y="80" width="84" height="14" fill="#ffffff" rx="3" fill-opacity="0.92"/>
+<text x="120" y="91" font-size="10" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">centre (165, 250)</text>
+<line x1="294" y1="44" x2="294" y2="66.5" stroke="#c62828" stroke-width="1.8" stroke-linecap="butt" data-direction="180"/>
+<polygon points="294,72 290.85,65 297.15,65" fill="#c62828"/>
+<line x1="294" y1="44" x2="316.5" y2="44" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="butt" data-direction="270"/>
+<polygon points="322,44 315,47.15 315,40.85" fill="#2e7d32"/>
+<text x="290" y="74.1" font-size="10.5" fill="#c62828" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="end" font-weight="bold">X</text>
+<text x="324" y="40" font-size="10.5" fill="#2e7d32" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-weight="bold">Y</text>
+<circle cx="294" cy="44" r="4.2" fill="#ffffff" stroke="#1f5fd6" stroke-width="1.4"/>
+<circle cx="294" cy="44" r="1.4" fill="#1f5fd6"/>
+<text x="287" y="39" font-size="10.5" fill="#1f5fd6" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="end" font-weight="bold">Z</text>
+</svg>

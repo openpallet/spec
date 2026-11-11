@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 272" width="680" height="272" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<title>Alignment: at which end of the gripper the products lie</title>
+<text x="85" y="18" font-size="12" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">(a) gripper 0</text>
+<text x="85" y="33" font-size="12" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">alignment 180</text>
+<rect x="49" y="44" width="72" height="156" fill="#7d9be0" rx="10" stroke="#3d5fae" stroke-width="1.2" fill-opacity="0.55"/>
+<line x1="55" y1="200" x2="115" y2="200" stroke="#e53935" stroke-width="5" stroke-linecap="butt"/>
+<line x1="37" y1="50" x2="37" y2="159.18" stroke="#7b2fa0" stroke-width="2.2" stroke-linecap="butt"/>
+<polygon points="37,165.68 33.4,157.68 40.6,157.68" fill="#7b2fa0"/>
+<text x="33" y="106.4" font-size="10.5" fill="#7b2fa0" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" transform="rotate(-90 33 106.4)">direction of travel</text>
+<g transform="translate(85 125) rotate(-270)" data-rotation="270">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(85 175) rotate(-270)" data-rotation="270">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(85 138) rotate(0)" data-rotation="0">
+<rect x="-35" y="-62" width="70" height="124" fill="#ffd21f" stroke="#d08c00" stroke-width="1.8" fill-opacity="0.2"/>
+<rect x="-37.45" y="-62" width="4.9" height="124" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="90"/>
+<rect x="32.55" y="-62" width="4.9" height="124" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="270"/>
+<polygon points="-10,-63.5 10,-63.5 0,-75" fill="#7a4a00" data-front="0"/>
+<circle cx="0" cy="0" r="8" fill="#ffffff" stroke="#7a4a00" stroke-width="1.5"/>
+<circle cx="0" cy="0" r="3.2" fill="#7a4a00"/>
+</g>
+<text x="126" y="204" font-size="10.5" fill="#e53935" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-weight="bold">end</text>
+<text x="85" y="264" font-size="11" fill="#7a4a00" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">products at the back</text>
+<text x="255" y="18" font-size="12" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">(b) gripper 0</text>
+<text x="255" y="33" font-size="12" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">alignment 0</text>
+<rect x="219" y="44" width="72" height="156" fill="#7d9be0" rx="10" stroke="#3d5fae" stroke-width="1.2" fill-opacity="0.55"/>
+<line x1="225" y1="200" x2="285" y2="200" stroke="#e53935" stroke-width="5" stroke-linecap="butt"/>
+<g transform="translate(255 125) rotate(-270)" data-rotation="270">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(255 175) rotate(-270)" data-rotation="270">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(255 162) rotate(0)" data-rotation="0">
+<rect x="-35" y="-62" width="70" height="124" fill="#ffd21f" stroke="#d08c00" stroke-width="1.8" fill-opacity="0.2"/>
+<rect x="-37.45" y="-62" width="4.9" height="124" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="90"/>
+<rect x="32.55" y="-62" width="4.9" height="124" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="270"/>
+<polygon points="-10,-63.5 10,-63.5 0,-75" fill="#7a4a00" data-front="0"/>
+<circle cx="0" cy="0" r="8" fill="#ffffff" stroke="#7a4a00" stroke-width="1.5"/>
+<circle cx="0" cy="0" r="3.2" fill="#7a4a00"/>
+</g>
+<text x="255" y="264" font-size="11" fill="#7a4a00" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">products at the front</text>
+<text x="425" y="18" font-size="12" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">(c) gripper 180</text>
+<text x="425" y="33" font-size="12" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">alignment 180</text>
+<rect x="389" y="44" width="72" height="156" fill="#7d9be0" rx="10" stroke="#3d5fae" stroke-width="1.2" fill-opacity="0.55"/>
+<line x1="395" y1="200" x2="455" y2="200" stroke="#e53935" stroke-width="5" stroke-linecap="butt"/>
+<g transform="translate(425 125) rotate(-270)" data-rotation="270">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(425 175) rotate(-270)" data-rotation="270">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(425 162) rotate(-180)" data-rotation="180">
+<rect x="-35" y="-62" width="70" height="124" fill="#ffd21f" stroke="#d08c00" stroke-width="1.8" fill-opacity="0.2"/>
+<rect x="-37.45" y="-62" width="4.9" height="124" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="90"/>
+<rect x="32.55" y="-62" width="4.9" height="124" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="270"/>
+<polygon points="-10,-63.5 10,-63.5 0,-75" fill="#7a4a00" data-front="0"/>
+<circle cx="0" cy="0" r="8" fill="#ffffff" stroke="#7a4a00" stroke-width="1.5"/>
+<circle cx="0" cy="0" r="3.2" fill="#7a4a00"/>
+</g>
+<text x="425" y="264" font-size="11" fill="#7a4a00" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">products at the back</text>
+<text x="595" y="18" font-size="12" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">(d) gripper 0</text>
+<text x="595" y="33" font-size="12" fill="#1f1f1f" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">alignment 900</text>
+<rect x="559" y="44" width="72" height="156" fill="#7d9be0" rx="10" stroke="#3d5fae" stroke-width="1.2" fill-opacity="0.55"/>
+<line x1="565" y1="200" x2="625" y2="200" stroke="#e53935" stroke-width="5" stroke-linecap="butt"/>
+<g transform="translate(595 125) rotate(-270)" data-rotation="270">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(595 175) rotate(-270)" data-rotation="270">
+<rect x="-25" y="-29" width="50" height="58" fill="#dcb77c" stroke="#7a5a2b" stroke-width="1.2"/>
+<rect x="-21.5" y="-26.9" width="43" height="3.85" fill="#4a2508" stroke="none" stroke-width="1" data-face="0"/>
+</g>
+<g transform="translate(595 150) rotate(0)" data-rotation="0">
+<rect x="-35" y="-62" width="70" height="124" fill="#ffd21f" stroke="#d08c00" stroke-width="1.8" fill-opacity="0.2"/>
+<rect x="-37.45" y="-62" width="4.9" height="124" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="90"/>
+<rect x="32.55" y="-62" width="4.9" height="124" fill="#7a4a00" stroke="none" stroke-width="1" data-jaw="270"/>
+<polygon points="-10,-63.5 10,-63.5 0,-75" fill="#7a4a00" data-front="0"/>
+<circle cx="0" cy="0" r="8" fill="#ffffff" stroke="#7a4a00" stroke-width="1.5"/>
+<circle cx="0" cy="0" r="3.2" fill="#7a4a00"/>
+</g>
+<text x="595" y="264" font-size="11" fill="#7a4a00" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="bold">products in the centre</text>
+</svg>

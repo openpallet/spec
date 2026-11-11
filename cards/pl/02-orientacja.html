@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenPallet · karta 2: Orientacja</title>
+<link rel="stylesheet" href="karty.css">
+</head>
+<body>
+<nav class="przejscia"><span><a href="index.html">spis</a> · <a href="01-uklad-stanowiska.html">← poprzednia</a></span><span><a href="03-chwytak.html">następna →</a></span></nav>
+<article class="karta" id="karta-2">
+<div class="glowa"><div><header><span class="nr">2</span><h1>Orientacja</h1><span class="marka">OpenPallet 1.2</span></header>
+<p class="regula">Orientacja to strona, w którą patrzy przód elementu (ściana 0 produktu, przód chwytaka) w układzie, w którym leży: 0, 90, 180 albo 270, jak na kompasie. Orientacja 0 to pozycja normalna.</p></div><img class="kompas" src="rysunki/kompas.svg" alt="Kompas: kierunki co 45 stopni, 0 u góry, liczby rosną w lewo"></div>
+<p>Produkt w pozycji normalnej (orientacja 0) stoi tak, jak dojeżdża do końca transportera bez obrotów: długość wzdłuż
+X, ściana 0 u góry rysunku.</p>
+<div class="rzad jeden"><figure class="pelny" style="width:86%;margin:0 auto"><img src="rysunki/k2-orientacje.svg" alt="Liczby przy ścianach: numery ścian. Ciemny pasek: ściana 0."><figcaption>Liczby przy ścianach: numery ścian. Ciemny pasek: ściana 0.</figcaption></figure></div>
+
+<p class="wzor">produkty przy pobraniu → chwytak pobiera → chwytak odkłada → produkty na palecie</p>
+
+<table>
+<thead>
+<tr>
+<th>Krok</th>
+<th>Pole w pliku</th>
+<th>Układ</th>
+<th>przykład 1</th>
+<th>przykład 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>produkty przy pobraniu</td>
+<td><code>products_at_pick[k].orientation</code></td>
+<td>transportera</td>
+<td>270</td>
+<td>90</td>
+</tr>
+<tr>
+<td>chwytak pobiera</td>
+<td><code>gripper_pick_orientation</code></td>
+<td>transportera</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>chwytak odkłada</td>
+<td><code>gripper_place_orientation</code></td>
+<td>palety</td>
+<td>90</td>
+<td>90</td>
+</tr>
+<tr>
+<td>produkty na palecie</td>
+<td><code>products[].orientation</code></td>
+<td>palety</td>
+<td>0</td>
+<td>180</td>
+</tr>
+</tbody>
+</table>
+<div class="rzad jeden"><figure class="pelny"><img src="rysunki/k2-przyklad.svg" alt="Na rysunku przykład 1: Produkt A, warstwa unikalna 1, ruch 1. Przykład 2 to ruch 4 z warstwy unikalnej 2."><figcaption>Na rysunku przykład 1: Produkt A, warstwa unikalna 1, ruch 1. Przykład 2 to ruch 4 z warstwy unikalnej 2.</figcaption></figure></div>
+
+<div class="dwie">
+<div>
+<ul>
+<li>Produkt obraca się razem z chwytakiem. Plik podaje wszystkie cztery orientacje ruchu: nic nie trzeba liczyć.</li>
+<li>Sterownik (PLC) dostaje orientacje przy pobraniu i obie orientacje chwytaka. Orientacji na palecie nie potrzebuje:
+  produkty leżą tak, jak odłożył je chwytak.</li>
+<li>Ściany z etykietą (<code>label_sides</code> typu produktu) są podane w pozycji normalnej, Produkt A: <code>[270]</code>.</li>
+</ul>
+</div>
+<div>
+<div class="rzad jeden">
+<figure class="pol"><img src="rysunki/k2-etykieta.svg" alt="Etykieta Produktu A (ściana 270) obraca się razem z produktem."><figcaption>Etykieta Produktu A (ściana 270) obraca się razem z produktem.</figcaption></figure>
+</div>
+</div>
+</div>
+<footer><span>OpenPallet, created and maintained by the makers of PalletDesigner · CC BY 4.0</span><span>karta 2 z 7</span><span class="adres"><a href="https://openpallet.org/">OpenPallet · openpallet.org</a></span></footer>
+</article>
+</body>
+</html>
